@@ -1,0 +1,13 @@
+com\mycompany\cuvaproject\SecondaryController.class
+com\mycompany\cuvaproject\controller\MainController.class
+com\mycompany\cuvaproject\controller\RegisterController.class
+com\mycompany\cuvaproject\models\Student.class
+com\mycompany\cuvaproject\models\Reprobated.class
+PDF\LeerPDF.class
+com\mycompany\cuvaproject\App.class
+com\mycompany\cuvaproject\controller\LoginController.class
+module-info.class
+com\mycompany\cuvaproject\PrimaryController.class
+com\mycompany\cuvaproject\data_base\ConexionMySQL.class
+com\mycompany\cuvaproject\models\User.class
+com\mycompany\cuvaproject\models\Subject.class

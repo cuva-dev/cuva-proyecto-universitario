@@ -1,0 +1,28 @@
+
+.mainFxmlClass {
+    .root {
+    -fx-background-color: #f4f4f4;
+}
+
+/* Botón estilizado */
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-radius: 5;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}
+}
