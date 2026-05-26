@@ -17,6 +17,10 @@ public class User {
         this.password = password;
         this.email = email;
         this.post = post;
+        
+        validated(); 
+
+
     }
 
     // getters
@@ -78,7 +82,7 @@ public class User {
 
     public void validated_name() {
 
-        if (this.name.isEmpty()) {
+        if (this.name.isEmpty() || this.name == null) {
             throw new IllegalArgumentException("el nombre no puede estar vacio");
         }
 

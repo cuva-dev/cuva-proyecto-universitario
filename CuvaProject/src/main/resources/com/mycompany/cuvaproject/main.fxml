@@ -12,20 +12,31 @@
         <URL value="@/com/mycompany/cuvaproject/main.css" />
     </stylesheets>
    <children>
-      <ImageView fitHeight="382.0" fitWidth="600.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+   
+      <ImageView pickOnBounds="true" preserveRatio="false" 
+                 AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" 
+                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <image>
-            <Image url="@../../../../../../../Downloads/Image_3trdoy3trdoy3trd.png" />
+            <Image url="@/com/mycompany/cuvaproject/Image/Image_3trdoy3trdoy3trd.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnIngresar" layoutX="252.0" layoutY="291.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="124.0" style="-fx-background-color: darkblue;" text="Ingresar" textFill="#ebe6e6">
+      
+      <Button id="btnIngresar" fx:id="btnIngresar" layoutX="252.0" layoutY="291.0" 
+              mnemonicParsing="false" prefHeight="28.0" prefWidth="124.0" 
+              style="-fx-background-color: darkblue;" text="Ingresar" textFill="#ebe6e6" 
+              onAction="#accionBoton"> <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      
+      <Button id="btnRegistrarse" layoutX="251.0" layoutY="337.0" 
+              mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="124.0" 
+              style="-fx-background-color: white; -fx-border-color: darkblue;" 
+              text="Registrarse" textAlignment="JUSTIFY" onAction="#actionRegister">  
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="251.0" layoutY="337.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: white; -fx-border-color: darkblue;" text="Registrarse" textAlignment="JUSTIFY">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Button>
+      
    </children>
 </AnchorPane>

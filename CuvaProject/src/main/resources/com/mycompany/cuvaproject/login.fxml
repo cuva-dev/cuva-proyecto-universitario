@@ -1,89 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" opacity="0.78" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane id="AnchorPane" opacity="0.78" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.LoginController">
     <stylesheets>
-        <URL value="@/resources/css/login.css" />
+        <URL value="@/com/mycompany/cuvaproject/main.css" />
     </stylesheets>
    <children>
-      <Label layoutX="100.0" layoutY="184.0" text="Nombre usuario:">
+      
+      <Label layoutX="100.0" layoutY="184.0" text="Nombre usuario:" textFill="linear-gradient(from 100% 20% to 100% 100%, black 0%, white 100%)">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
-         <textFill>
-            <LinearGradient endX="1.0" proportional="false" startX="1.0" startY="0.1990521327014218">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
       </Label>
-      <Label layoutX="127.0" layoutY="229.0" text="Contraseña:">
+
+      <Label layoutX="127.0" layoutY="229.0" text="Contraseña:" textFill="linear-gradient(from 100% 20% to 100% 100%, black 0%, white 100%)">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
-         <textFill>
-            <LinearGradient endX="1.0" proportional="false" startX="1.0" startY="0.1990521327014218">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
       </Label>
-      <TextField layoutX="205.0" layoutY="179.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: blak;" />
-      <PasswordField layoutX="204.0" layoutY="223.0" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: blak;">
+      
+      <TextField layoutX="205.0" layoutY="179.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
+      
+      <PasswordField layoutX="204.0" layoutY="223.0" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: black;">
          <font>
             <Font size="10.0" />
-         </font></PasswordField>
-      <Label layoutX="219.0" layoutY="29.0" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: while;" text="Login " textFill="#070017">
+         </font>
+      </PasswordField>
+      
+      <Label layoutX="219.0" layoutY="29.0" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: white;" text="Login " textFill="#070017">
          <font>
             <Font name="Arial" size="32.0" />
          </font>
       </Label>
-      <ImageView disable="true" fitHeight="27.0" fitWidth="25.0" layoutX="300.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+      
+      <ImageView disable="true" fitHeight="27.0" fitWidth="25.0" layoutX="325.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.62" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Downloads/candado..jpg" />
+            <Image url="/com/mycompany/cuvaproject/image/UNEFA.jpg" /> 
          </image>
       </ImageView>
-      <Label layoutX="152.0" layoutY="103.0" prefHeight="37.0" prefWidth="197.0" style="-fx-background-color: while;" text="Inicia sesion" textFill="#070017">
+      
+      <Label layoutX="152.0" layoutY="103.0" prefHeight="37.0" prefWidth="197.0" style="-fx-background-color: white;" text="Inicia sesion" textFill="#070017">
          <font>
             <Font name="Arial" size="22.0" />
          </font>
       </Label>
+      
       <Button layoutX="262.0" layoutY="262.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="77.0" style="-fx-background-color: darkblue;" text="Ingresar" textFill="#f5f4f4">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
+      
    </children>
 </AnchorPane>
