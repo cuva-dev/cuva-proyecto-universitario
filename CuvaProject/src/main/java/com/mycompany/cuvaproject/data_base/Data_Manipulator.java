@@ -83,6 +83,5 @@ public class Data_Manipulator {
             e.printStackTrace();
         }
     }
-    }
 }
     
