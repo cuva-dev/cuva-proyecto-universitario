@@ -13,6 +13,7 @@ import com.mycompany.cuvaproject.services.serviceUser;
 
 public class RegisterController implements Initializable {
     
+    @FXML
     private Button btnRegister;
     
     
@@ -40,7 +41,7 @@ public class RegisterController implements Initializable {
     
     
     @FXML
-    private void handleUser() {
+    private void handleUser(ActionEvent event) {
 
         String nameValue = name.getText();
         String lastNameValue = lastname.getText();
@@ -63,11 +64,4 @@ public class RegisterController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    @FXML
-    private void accionRegister(ActionEvent event) {
-        System.out.println("---------------------------------");
-        System.out.println("¡El botón funciona correctamente!");
-        System.out.println("---------------------------------");
-    }
 }

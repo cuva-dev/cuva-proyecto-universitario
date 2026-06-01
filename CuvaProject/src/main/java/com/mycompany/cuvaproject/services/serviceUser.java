@@ -9,9 +9,8 @@ public class serviceUser {
     
         User user = new User(name, lastName, username,  password,  email,  post);
         
+        
         return user;
     
     }
-    
-    
 }

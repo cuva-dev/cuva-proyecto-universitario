@@ -19,6 +19,7 @@ public class User {
         this.post = post;
         
         validated(); 
+        System.out.println("se creo el objeto");
 
 
     }
@@ -82,7 +83,7 @@ public class User {
 
     public void validated_name() {
 
-        if (this.name.isEmpty() || this.name == null) {
+        if (this.name == null || this.name.isEmpty()) {
             throw new IllegalArgumentException("el nombre no puede estar vacio");
         }
 
