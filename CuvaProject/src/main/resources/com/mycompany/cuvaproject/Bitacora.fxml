@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.mycompany.cuvaproject.controller.BitacoraController">
+    <stylesheets>
+        <URL value="@/com/mycompany/cuvaproject/bitacora.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: while;" text="Bitacora" textFill="#100232">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="132.0" prefHeight="26.0" prefWidth="368.0" style="-fx-background-color: while;" text="No existe usuario registrado...!" textFill="#100232">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
