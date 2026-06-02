@@ -4,7 +4,7 @@ package com.mycompany.cuvaproject.data_base;
  import java.sql.DriverManager; // establece la conexión con la base de datos
  import java.sql.SQLException; // maneja los errores relacionados con SQL
 
-public class connectionMySQL {
+public class ConnectionMySQL {
 
     // Librería de MySQL
     private String driver = "com.mysql.cj.jdbc.Driver";
