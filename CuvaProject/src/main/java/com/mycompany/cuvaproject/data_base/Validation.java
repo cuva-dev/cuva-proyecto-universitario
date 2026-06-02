@@ -1,4 +1,4 @@
-package Java_and_mySQL;
+package com.mycompany.cuvaproject.data_base;
 
 import java.sql.Connection; // maneja la conexión a la base de datos
 import java.sql.Statement; // permite ejecutar consultas SQL
@@ -6,14 +6,13 @@ import java.sql.ResultSet; // maneja los resultados de las consultas SQL
 import java.sql.SQLException; // maneja los errores relacionados con SQL
 
 
-import models.User;
+import com.mycompany.cuvaproject.models.User;
 
 public class Validation {
 
     public String ValidationUsername(ConnectionMySQL CMySQL,User user){
         
         String username = "",password="";
-        String uusername = user.getUsername(),upassword = user.getPassword();
         String sql = "SELECT UserName,Password FROM User WHERE UserName = '"+user.getUsername()+"'";
         try (Connection conn = CMySQL.conectarMySQL();
              Statement stmt = conn.createStatement();
@@ -28,7 +27,7 @@ public class Validation {
         }catch (SQLException e) {
             System.err.println("Error al consultar los datos: " + e.getMessage());
         }  
-             if (uusername == username || upassword == password){
+             if (user.getUsername() != username || user.getPassword() != password){
                     sql = "true";
                 }else{
                     sql ="false";
