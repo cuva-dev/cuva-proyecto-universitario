@@ -32,7 +32,7 @@ public class Validation {
                 }else{
                     sql ="false";
                 }
-                System.out.println(username + uusername + password +upassword);
+                System.out.println(username + user.getUsername() + password +user.getPassword());
                
     return sql;          
     
