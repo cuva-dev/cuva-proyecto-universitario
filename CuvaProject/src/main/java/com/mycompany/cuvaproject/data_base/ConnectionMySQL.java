@@ -1,4 +1,4 @@
-package Java_and_mySQL;
+package com.mycompany.cuvaproject.data_base;
 
  import java.sql.Connection; // maneja la conexión a la base de datos
  import java.sql.DriverManager; // establece la conexión con la base de datos
