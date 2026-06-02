@@ -1,0 +1,62 @@
+.root {
+    -fx-background-color: #f4f6f9;
+}
+
+/* Título Principal */
+/* Título Principal */
+.label-titulo {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Etiquetas de los campos */
+.label-formulario {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-weight: bold;
+}
+
+/* Campos de texto modernos (Línea inferior estilo Material) */
+.text-field, .password-field, .combo-box {
+    -fx-background-color: transparent, #ffffff, transparent, #ffffff;
+    -fx-background-insets: 0, 0 0 1 0, 0, 0;
+    -fx-border-color: transparent transparent #bdc3c7 transparent;
+    -fx-border-width: 1;
+    -fx-padding: 6 0 6 0;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-border-color: transparent transparent #3498db transparent;
+    -fx-border-width: 2;
+}
+
+/* Botón Registrar (Color Azul Moderno) */
+.boton-registrar {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.boton-registrar:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Botón Cancelar (Gris Elegante) */
+.boton-cancelar {
+    -fx-background-color: #95a5a6;
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.boton-cancelar:hover {
+    -fx-background-color: #7f8c8d;
+}

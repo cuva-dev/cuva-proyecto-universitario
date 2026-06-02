@@ -2,7 +2,7 @@ package com.mycompany.cuvaproject.models;
 
 /**
  *
- * @author FFIT221
+ * @author FFIT221 mmmmmmmmmmmmmmmmmmm
  */
 public class Reprobated {
 

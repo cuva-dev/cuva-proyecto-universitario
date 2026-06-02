@@ -1,3 +1,4 @@
+
 package com.mycompany.cuvaproject.controller;
 
 import java.io.IOException;
@@ -10,56 +11,48 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
 
-public class PruebaController implements Initializable {
-
+public class VentanaController implements Initializable {
     
     @FXML
     private BorderPane mainContainer; 
 
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Al principio, mostramos la pantalla de Inicio/Bienvenida por defecto
-        changeView("/com/mycompany/cuvaproject/register.fxml"); 
+        
+        changeView("/com/mycompany/cuvaproject/estudiantes.fxml"); 
     }
-
-    /**
-     * Acción del botón "Inicio" en el Navbar
-     */
+    
     @FXML
-    private void showStudentList(ActionEvent event) {
-        changeView("/com/mycompany/cuvaproject/register.fxml");
+    private void showStudients(ActionEvent event) {
+        changeView("/com/mycompany/cuvaproject/estudiantes.fxml");
     }
-
-    /**
-     * Acción del botón "Lista de Usuarios" en el Navbar
-     */
+    
     @FXML
-    private void showCreateUser(ActionEvent event) {
-        changeView("/com/mycompany/cuvaproject/login.fxml");
+    private void registerUser(ActionEvent event) {
+        changeView("/com/mycompany/cuvaproject/registroNuevoUsuario.fxml");
     }
-
-    /**
-     * Acción del botón "Bitácora" en el Navbar
-     */
+    
     @FXML
-    private void handleLogout(ActionEvent event) {
-        changeView("/com/mycompany/cuvaproject/min.fxml");
+    private void closeSesion(ActionEvent event) {
+        changeView("/com/mycompany/cuvaproject/main.fxml");
+    }
+    
+    @FXML
+    private void showBinnacle(ActionEvent event) {
+        changeView("/com/mycompany/cuvaproject/Bitacora.fxml");
     }
 
-    /**
-     * EL MÉTODO MÁGICO: 
-     * Se encarga de limpiar el centro del BorderPane e inyectar el nuevo FXML
-     */
     private void changeView(String fxmlPath) {
         try {
-            // 1. Mensaje en consola para saber qué ventana se solicitó
+            
             System.out.println("[Navbar] Intentando cambiar vista a: " + fxmlPath);
             
-            // 2. Cargamos el archivo FXML de la subpantalla de manera independiente
+            
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent subView = loader.load();
             
-            // 3. Reemplazamos el contenido viejo del centro por el nuevo
+            
             mainContainer.setCenter(subView);
             
             System.out.println("[Navbar] ¡Vista cambiada con éxito!");

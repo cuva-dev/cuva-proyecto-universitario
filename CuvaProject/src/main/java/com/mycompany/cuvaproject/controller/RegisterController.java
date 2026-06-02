@@ -63,12 +63,12 @@ public class RegisterController implements Initializable {
         
         System.out.println("[Registro] Usuario creado con éxito. Redirigiendo...");
 
-        // Redirección dinámica al centro del MainLayout
+        
         try {
-            System.out.println("[Registro] Redirigiendo a prueba.fxml...");
+            System.out.println(" Redirigiendo a prueba.fxml...");
     
-    // 1. Cargamos el archivo de la vista de pruebas
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/cuvaproject/prueba.fxml"));
+   
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/cuvaproject/Ventana.fxml"));
             Parent viewPrueba = loader.load();
     
     // 2. Obtenemos la escena actual desde el botón

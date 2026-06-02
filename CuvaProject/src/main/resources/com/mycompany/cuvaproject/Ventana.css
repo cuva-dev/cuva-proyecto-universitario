@@ -1,0 +1,23 @@
+.button {
+
+    -fx-background-color: #002d72; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold; 
+    -fx-font-size: 14;
+    
+    
+    -fx-background-radius: 10; 
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 5, 0, 0, 2);
+}
+
+.fondo_imagen {
+    -fx-background-image: url("image/fondo.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover; 
+}
+.cerrarSesion:hover {
+    -fx-background-color: #0044a7; 
+    -fx-effect: dropshadow(three-pass-box, rgba(0,68,167,0.4), 10, 0, 0, 4);
+}
