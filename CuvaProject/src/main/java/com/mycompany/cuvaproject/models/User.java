@@ -1,6 +1,13 @@
 package com.mycompany.cuvaproject.models;
 
+import com.mycompany.cuvaproject.data_base.Data_Manipulator;
+import com.mycompany.cuvaproject.data_base.ConnectionMySQL;
+
 public class User {
+    
+    ConnectionMySQL ObjCMySQL = new ConnectionMySQL();
+    Data_Manipulator ObjDataM = new Data_Manipulator();
+    
     private String name;
     private String lastName;
     private String username;
@@ -165,5 +172,6 @@ public class User {
         validated_lastName();
         validated_email();
         validated_password();
+        ObjDataM.InsertTableUser(ObjCMySQL,this);
     }
 }
