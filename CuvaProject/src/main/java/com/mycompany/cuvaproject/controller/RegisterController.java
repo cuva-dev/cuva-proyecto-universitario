@@ -71,7 +71,6 @@ public class RegisterController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/cuvaproject/Ventana.fxml"));
             Parent viewPrueba = loader.load();
     
-    // 2. Obtenemos la escena actual desde el botón
             Scene currentScene = btnRegister.getScene();
     
     // 3. Reemplazamos TODA la ventana con la nueva vista
