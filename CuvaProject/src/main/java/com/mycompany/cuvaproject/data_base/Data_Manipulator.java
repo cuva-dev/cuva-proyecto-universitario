@@ -1,5 +1,4 @@
 package com.mycompany.cuvaproject.data_base;
-import java.sql.Statement; // permite ejecutar consultas SQL
 import java.sql.Connection; // maneja la conexión a la base de datos
 import java.sql.PreparedStatement;// permite ejecutar consultas SQL con parámetros
 import java.sql.ResultSet; // maneja los resultados de las consultas SQL
@@ -24,10 +23,10 @@ public class Data_Manipulator {
         try (Connection conn = CMySQL.conectarMySQL()) {
             
             // prepara la consulta SQL
-            Statement stmt = conn.prepareStatement(sql);
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             
-            // el "stmt " ejecutar la inserción
-            stmt.executeUpdate(sql);
+            // el "pstmt" ejecutar la inserción
+            pstmt.executeUpdate();
                 
         } catch (SQLException e) {
             System.out.println(e);
@@ -254,12 +253,12 @@ public class Data_Manipulator {
     
     //metodo para extraer datos de las tablas
 
-    public void ExtractTableUser(ConnectionMySQL CMySQL,User user){
+        public void ExtractTableUser(ConnectionMySQL CMySQL,User user){
 
         String sql = "SELECT * FROM User WHERE UserName = '"+user.getUsername()+"'";
         try (Connection conn = CMySQL.conectarMySQL();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
 
             // Iterar sobre el ResultSet para extraer los datos
             while (rs.next()) {
@@ -283,8 +282,8 @@ public class Data_Manipulator {
     String sql = "SELECT * FROM Subject WHERE Code = '"+sub.getCode()+"'";  
 
     try(Connection conn = CMySQL.conectarMySQL()){
-            Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql);
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
                 String code = rs.getString("Code");
                 String name = rs.getString("Name");
@@ -301,8 +300,8 @@ public class Data_Manipulator {
     String sql = "SELECT * FROM Student WHERE ID= '"+stu.getID()+"'";
 
     try (Connection conn = CMySQL.conectarMySQL()){
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(sql);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        ResultSet rs = pstmt.executeQuery();
 
         while(rs.next()){
             
@@ -327,8 +326,8 @@ public class Data_Manipulator {
         +" WHERE rep.IDStudent = '32066670';";
 
         try (Connection conn = CMySQL.conectarMySQL();
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql)){
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery()){
         
         while(rs.next()){
         int ID = rs.getInt("ID");
@@ -344,6 +343,7 @@ public class Data_Manipulator {
 
         
     }
+
 
 
 }
