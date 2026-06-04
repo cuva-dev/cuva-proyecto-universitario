@@ -53,16 +53,11 @@ public class LoginController implements Initializable {
             
             
             
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/fxml/register.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/cuvaproject/Ventana.fxml"));
             Parent root = loader.load();
 
-            // 3. Obtener el Stage actual
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            //  Cambiamos la ventana
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            Scene currentScene = btnIngresar.getScene();
+            currentScene.setRoot(root);
             
         } catch (IOException e) {
             // El método load() obliga a manejar este error por si el archivo no existe
