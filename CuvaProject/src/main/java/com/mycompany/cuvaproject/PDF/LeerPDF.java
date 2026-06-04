@@ -8,7 +8,7 @@ import java.io.InputStream;
 
 public class LeerPDF {
 
-    public static void main(String[] args) throws Exception {
+    public void leerPDF() throws Exception {
 
         InputStream file = LeerPDF.class.getClassLoader()
                 .getResourceAsStream("N-32066670.pdf");
