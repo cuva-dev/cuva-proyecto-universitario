@@ -17,7 +17,7 @@ public class Data_Manipulator {
         public void InsertTableUser(ConnectionMySQL CMySQL,User user){
 
         // Consulta SQL en este caso Insertar
-        String sql = "INSERT INTO user (Name,LastName,UserName,Email,Password,Post) VALUES ('"+user.getName()+"','"+user.getLastName()+"','"+user.getUsername()+"','"+user.getEmail()+"','"+user.getPassword()+"','"+user.getPost()+"')";
+        String sql = "INSERT INTO user (Name,LastName,ID,Email,Password,Post) VALUES ('"+user.getName()+"','"+user.getLastName()+"','"+user.getID()+"','"+user.getEmail()+"','"+user.getPassword()+"','"+user.getPost()+"')";
 
         //conecta a la base de datos
         try (Connection conn = CMySQL.conectarMySQL()) {
@@ -85,7 +85,7 @@ public class Data_Manipulator {
 
 
         // Consulta SQL en este caso Borrar
-        String sql = "DELETE FROM user WHERE UserName = '"+user.getUsername()+"'";
+        String sql = "DELETE FROM user WHERE ID = '"+user.getID()+"'";
         // conecta a la base de datos
         try (Connection conn = CMySQL.conectarMySQL()) {
             
@@ -171,7 +171,7 @@ public class Data_Manipulator {
 
     public void modifyTableUser(ConnectionMySQL CMySQL,User user){
 
-        String sql = "UPDATE User SET Name = '"+user.getName()+"',LastName = '"+user.getLastName()+"',Email = '"+user.getEmail()+"', Password = '"+user.getPassword()+"', Post = '"+user.getPost()+"' WHERE UserName = '"+user.getUsername()+"'";
+        String sql = "UPDATE User SET Name = '"+user.getName()+"',LastName = '"+user.getLastName()+"',Email = '"+user.getEmail()+"', Password = '"+user.getPassword()+"', Post = '"+user.getPost()+"' WHERE ID = '"+user.getID()+"'";
 
         try (Connection conn = CMySQL.conectarMySQL()){
 
@@ -255,7 +255,7 @@ public class Data_Manipulator {
 
         public void ExtractTableUser(ConnectionMySQL CMySQL,User user){
 
-        String sql = "SELECT * FROM User WHERE UserName = '"+user.getUsername()+"'";
+        String sql = "SELECT * FROM User WHERE ID = '"+user.getID()+"'";
         try (Connection conn = CMySQL.conectarMySQL();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
@@ -263,12 +263,12 @@ public class Data_Manipulator {
             // Iterar sobre el ResultSet para extraer los datos
             while (rs.next()) {
                 // Extrae datos por el nombre de la columna
-                String username = rs.getString("Username");
+                String ID = rs.getString("ID");
                 String name = rs.getString("Name");
                 String lastname = rs.getString("Lastname");
                 String email = rs.getString("email"); 
 
-                System.out.println(username + name);
+                System.out.println(ID + name);
         }
 
         } catch (SQLException e) {
