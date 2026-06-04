@@ -10,10 +10,10 @@ import com.mycompany.cuvaproject.models.User;
 
 public class Validation {
 
-    public String ValidationLogin(ConnectionMySQL CMySQL,User user){
+    public String ValidationLogin(ConnectionMySQL CMySQL,String idValue,String passwordValue){
         
-        String username = "",password="";
-        String sql = "SELECT ID,Password FROM User WHERE ID = '"+user.getID()+"'";
+        String ID = "",password="";
+        String sql = "SELECT ID,Password FROM User WHERE ID = '"+idValue+"'";
         try (Connection conn = CMySQL.conectarMySQL();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -21,18 +21,18 @@ public class Validation {
             // Iterar sobre el ResultSet para extraer los datos
             while (rs.next()) {
                 // Extrae datos por el nombre de la columna
-                username = rs.getString("ID");
+                ID = rs.getString("ID");
                 password = rs.getString("Password");
             }
         }catch (SQLException e) {
             System.err.println("Error al consultar los datos: " + e.getMessage());
         }  
-             if (user.getID() != username || user.getPassword() != password){
-                    sql = "true";
+             if (idValue != ID || passwordValue != password){
+                    sql = "true, iniciando seccion";
                 }else{
-                    sql ="false";
+                    sql ="false, no se encuentra registrado";
                 }
-                System.out.println(username + user.getID() + password +user.getPassword());
+                System.out.println(ID + idValue + password +passwordValue);
                
     return sql;          
     
