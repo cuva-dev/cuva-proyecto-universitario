@@ -24,7 +24,7 @@
          </image>
       </ImageView>
   
-      <Label layoutX="129.0" layoutY="8.0" prefHeight="34.0" prefWidth="197.0" style="-fx-background-color: white;" text="Resiste" textFill="#120139">
+      <Label layoutX="129.0" layoutY="8.0" prefHeight="34.0" prefWidth="197.0" style="-fx-background-color: white;" text="Registrarse" textFill="#120139">
          <font>
             <Font name="Arial" size="28.0" />
          </font>
@@ -55,7 +55,7 @@
             <Font name="Arial" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="username" layoutX="117.0" layoutY="195.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
+      <TextField fx:id="id" layoutX="117.0" layoutY="195.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
 
       <Label layoutX="45.0" layoutY="226.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: white;" text="Contraseña:" textFill="#010003">
          <font>

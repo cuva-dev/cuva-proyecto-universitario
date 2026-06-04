@@ -3,16 +3,16 @@ package com.mycompany.cuvaproject.models;
 public class User {
     private String name;
     private String lastName;
-    private String username;
+    private String ID;
     private String password;
     private String email;
     private String post;
 
     // Constructor
-    public User(String name, String lastName, String username, String password, String email, String post) {
+    public User(String name, String lastName, String id, String password, String email, String post) {
         this.name = name;
         this.lastName = lastName;
-        this.username = username;
+        this.ID = id;
         this.password = password;
         this.email = email;
         this.post = post;
@@ -25,7 +25,7 @@ public class User {
     // Getters
     public String getName() { return this.name; }
     public String getLastName() { return this.lastName; }
-    public String getUsername() { return this.username; }
+    public String getID() { return this.ID; }
     public String getPassword() { return this.password; }
     public String getEmail() { return this.email; }
     public String getPost() { return this.post; }
@@ -41,9 +41,9 @@ public class User {
         validated_lastName();
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-        validated_username();
+    public void setID(String id) {
+        this.ID = id;
+        validated_ID();
     }
 
     public void setPassword(String password) {
@@ -81,7 +81,7 @@ public class User {
     }
 
     public void validated_lastName() {
-        // CORREGIDO: Validación de vacío al principio para evitar NullPointerException
+
         if (this.lastName == null || this.lastName.trim().isEmpty()) {
             throw new IllegalArgumentException("El apellido no puede estar vacio");
         }
@@ -99,16 +99,26 @@ public class User {
         }
     }
 
-    public void validated_username() {
-        if (this.username == null || this.username.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre de usuario no puede estar vacio");
+    public void validated_ID() {
+        if (this.ID == null || this.ID.trim().isEmpty()) {
+            throw new IllegalArgumentException("la cedula no puede esta vacia");
         }
-        if (this.username.length() < 3) {
-            throw new IllegalArgumentException("El nombre de usuario debe tener un minimo de 3 caracteres");
+        if (this.ID.length() < 7) {
+            throw new IllegalArgumentException("La cedula debe de tener un minimo de 7 caracteres");
         }
-        if (this.username.length() > 30) {
-            throw new IllegalArgumentException("El nombre de usuario debe tener menos de 30 caracteres");
+        if (this.ID.length() > 11) {
+            throw new IllegalArgumentException("La cedula solo puede tener un maximo de 11 caracteres");
         }
+        
+        for(int i=0; i <= this.ID.length()- 1; i++){
+            
+            char c = this.ID.charAt(i);
+            
+            if(!Character.isDigit(c) ){
+                throw new IllegalArgumentException(" La cedula no puede tener caracteres especiales, espacios y tampoco puede ser letras");}
+            
+        }
+        
     }
 
     public void validated_email() {
@@ -128,7 +138,7 @@ public class User {
         if (this.password.length() < 8) {
             throw new IllegalArgumentException("La contraseña debe tener como mínimo 8 caracteres");
         }
-        if (this.password.equals(this.username)) {
+        if (this.password.equals(this.ID)) {
             throw new IllegalArgumentException("La contraseña no puede ser igual al nombre de usuario");
         }
 
@@ -160,7 +170,7 @@ public class User {
 
     // Agrupador de validaciones
     public void validated() {
-        validated_username();
+        validated_ID();
         validated_name();
         validated_lastName();
         validated_email();

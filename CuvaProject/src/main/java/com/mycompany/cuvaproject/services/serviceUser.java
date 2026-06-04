@@ -5,9 +5,9 @@ import com.mycompany.cuvaproject.models.User;
 
 public class serviceUser {
     
-    public User create(String name, String lastName, String username, String password, String email, String post){
+    public User create(String name, String lastName, String id, String password, String email, String post){
     
-        User user = new User(name, lastName, username,  password,  email,  post);
+        User user = new User(name, lastName, id,  password,  email,  post);
         
         
         return user;

@@ -28,7 +28,7 @@ public class RegisterController implements Initializable {
     private TextField lastname;
     
     @FXML
-    private TextField username;
+    private TextField id;
     
     @FXML
     private TextField password;
@@ -47,7 +47,7 @@ public class RegisterController implements Initializable {
 
         String nameValue = name.getText();
         String lastNameValue = lastname.getText();
-        String usernameValue = username.getText();
+        String idValue = id.getText();
         String passwordValue = password.getText();
         String passwordTwoValue = password_two.getText();
         String emailValue = email.getText();
@@ -59,7 +59,7 @@ public class RegisterController implements Initializable {
 
         // Creación del usuario
         serviceUser service = new serviceUser();
-        service.create(nameValue, lastNameValue, usernameValue, passwordValue, emailValue, postValue);
+        service.create(nameValue, lastNameValue, idValue, passwordValue, emailValue, postValue);
         
         System.out.println("[Registro] Usuario creado con éxito. Redirigiendo...");
 
@@ -73,8 +73,7 @@ public class RegisterController implements Initializable {
     
             Scene currentScene = btnRegister.getScene();
     
-    // 3. Reemplazamos TODA la ventana con la nueva vista
-    // Esto funciona perfectamente si tu raíz actual es un AnchorPane
+
             currentScene.setRoot(viewPrueba);
     
             System.out.println("[Registro] ¡Redirección completada con éxito!");
@@ -87,6 +86,6 @@ public class RegisterController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Por ahora vacío
+
     }    
 }
