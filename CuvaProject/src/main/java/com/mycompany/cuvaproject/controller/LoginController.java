@@ -1,5 +1,8 @@
 package com.mycompany.cuvaproject.controller;
 
+import com.mycompany.cuvaproject.data_base.Validation;
+import com.mycompany.cuvaproject.data_base.ConnectionMySQL;
+
 import java.io.IOException;  
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +19,9 @@ import javafx.scene.control.TextField;
 
 public class LoginController implements Initializable {
     
+    Validation v = new Validation();
+    ConnectionMySQL CMySQL = new ConnectionMySQL();
+        
     @FXML
     private Button btnIngresar;
     
@@ -41,9 +47,8 @@ public class LoginController implements Initializable {
         if (idValue.isEmpty() || passwordValue.isEmpty()) {
             throw new IllegalArgumentException("los campos no pueden estar vacios");
         }
-    
-        
-        
+
+        System.out.printf(v.ValidationLogin(CMySQL, idValue, passwordValue)); // esto te debe decir si esta o en la base de datos 
         
     }
     
