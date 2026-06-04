@@ -13,7 +13,7 @@ public class Validation {
     public String ValidationLogin(ConnectionMySQL CMySQL,User user){
         
         String username = "",password="";
-        String sql = "SELECT UserName,Password FROM User WHERE ID = '"+user.getID()+"'";
+        String sql = "SELECT ID,Password FROM User WHERE ID = '"+user.getID()+"'";
         try (Connection conn = CMySQL.conectarMySQL();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
