@@ -27,7 +27,7 @@ public class Validation {
         }catch (SQLException e) {
             System.err.println("Error al consultar los datos: " + e.getMessage());
         }  
-             if (user.getUsername() != username || user.getPassword() != password){
+             if (user.getID() != username || user.getPassword() != password){
                     sql = "true";
                 }else{
                     sql ="false";
