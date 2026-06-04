@@ -16,7 +16,7 @@
     </stylesheets>
    <children>
       
-      <Label layoutX="100.0" layoutY="184.0" text="Nombre usuario:" textFill="linear-gradient(from 100% 20% to 100% 100%, black 0%, white 100%)">
+      <Label layoutX="152.0" layoutY="185.0" text="cedula:" textFill="linear-gradient(from 100% 20% to 100% 100%, black 0%, white 100%)">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -28,15 +28,15 @@
          </font>
       </Label>
       
-      <TextField layoutX="205.0" layoutY="179.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
+      <TextField fx:id="id" layoutX="205.0" layoutY="179.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
       
-      <PasswordField layoutX="204.0" layoutY="223.0" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: black;">
+      <PasswordField fx:id="password" layoutX="204.0" layoutY="223.0" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: black;">
          <font>
             <Font size="10.0" />
          </font>
       </PasswordField>
       
-      <Label layoutX="219.0" layoutY="29.0" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: white;" text="Login " textFill="#070017">
+      <Label layoutX="256.0" layoutY="30.0" prefHeight="37.0" prefWidth="89.0" style="-fx-background-color: white;" text="Login " textFill="#070017">
          <font>
             <Font name="Arial" size="32.0" />
          </font>
@@ -44,11 +44,11 @@
       
       <ImageView disable="true" fitHeight="27.0" fitWidth="25.0" layoutX="325.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.62" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/com/mycompany/cuvaproject/image/UNEFA.jpg" /> 
+            <Image url="@/com/mycompany/cuvaproject/UNEFA.jpg" /> 
          </image>
       </ImageView>
       
-      <Label layoutX="152.0" layoutY="103.0" prefHeight="37.0" prefWidth="197.0" style="-fx-background-color: white;" text="Inicia sesion" textFill="#070017">
+      <Label layoutX="236.0" layoutY="104.0" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: white;" text="Inicia sesion" textFill="#070017">
          <font>
             <Font name="Arial" size="22.0" />
          </font>
