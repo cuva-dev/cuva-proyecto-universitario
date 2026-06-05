@@ -47,9 +47,6 @@ public class LoginController implements Initializable {
         if (idValue.isEmpty() || passwordValue.isEmpty()) {
             throw new IllegalArgumentException("los campos no pueden estar vacios");
         }
-
-        System.out.printf(v.ValidationLogin(CMySQL, idValue, passwordValue));
-        
         if(v.ValidationLogin(CMySQL, idValue, passwordValue).equalsIgnoreCase("true")){accionBoton();}
     }
     
