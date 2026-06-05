@@ -1,5 +1,6 @@
 package com.mycompany.cuvaproject.data_base;
 
+import java.sql.PreparedStatement;// permite ejecutar consultas SQL con parámetros
 import java.sql.Connection; // maneja la conexión a la base de datos
 import java.sql.ResultSet; // maneja los resultados de las consultas SQL
 import java.sql.SQLException; // maneja los errores relacionados con SQL
@@ -31,7 +32,7 @@ public class Validation {
                 }else{
                     sql ="false";
                 }
-                System.out.println( "Database: "+ ID + "- Usuario: " +idValue +"-Database:" +password +"- Usuario:"+ passwordValue+ "---");
+                System.out.println( "User Database: "+ ID + "- User Usuario: " +idValue +"-password Database:" +password +"-password Usuario:"+ passwordValue+ "---");
                
     return sql;          
     
