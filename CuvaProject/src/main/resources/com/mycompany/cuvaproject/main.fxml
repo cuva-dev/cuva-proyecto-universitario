@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.MainController">
-    <stylesheets>
-        <URL value="@/com/mycompany/cuvaproject/main.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" snapToPixel="false" styleClass="mainFxmlClass" stylesheets="@main.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.MainController">
    <children>
    
-      <ImageView pickOnBounds="true" preserveRatio="false" 
-                 AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" 
-                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <ImageView pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@/com/mycompany/cuvaproject/Image/Image_3trdoy3trdoy3trd.png" />
          </image>
       </ImageView>
-      
-      <Button id="btnIngresar" fx:id="btnIngresar" layoutX="252.0" layoutY="291.0" 
-              mnemonicParsing="false" prefHeight="28.0" prefWidth="124.0" 
-              style="-fx-background-color: darkblue;" text="Ingresar" textFill="#ebe6e6" 
-              onAction="#accionBoton"> <font>
+      <ImageView layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0" translateZ="1.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@image/Image_3trdoy3trdoy3trd.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </ImageView>
+      <Button id="btnIngresar" fx:id="btnIngresar" layoutX="651.0" layoutY="494.0" mnemonicParsing="false" onAction="#accionBoton" prefHeight="28.0" prefWidth="109.0" style="-fx-background-color: darkblue;" text="Ingresar" textFill="#ebe6e6">
+         <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      
-      <Button id="btnRegistrarse" layoutX="251.0" layoutY="337.0" 
-              mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="124.0" 
-              style="-fx-background-color: white; -fx-border-color: darkblue;" 
-              text="Registrarse" textAlignment="JUSTIFY" onAction="#actionRegister">  
+      <Button id="btnRegistrarse" layoutX="651.0" layoutY="533.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#actionRegister" prefHeight="28.0" prefWidth="109.0" style="-fx-background-color: white; -fx-border-color: darkblue;" text="Registrarse" textAlignment="JUSTIFY">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
       
    </children>
+   <padding>
+      <Insets bottom="1.0" top="1.0" />
+   </padding>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
 </AnchorPane>

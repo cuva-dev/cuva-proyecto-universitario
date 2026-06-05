@@ -1,7 +1,7 @@
 package com.mycompany.cuvaproject.models;
 
     public class Student {
-
+     //aa
         private String name;
         private String lastName;
         private String Career;
