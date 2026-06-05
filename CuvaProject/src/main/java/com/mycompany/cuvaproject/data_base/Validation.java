@@ -27,12 +27,12 @@ public class Validation {
         }catch (SQLException e) {
             System.err.println("Error al consultar los datos: " + e.getMessage());
         }  
-             if (idValue.equals(ID) || passwordValue.equals(password)){
+             if (idValue.equals(ID) && passwordValue.equals(password)){
                     sql = "true";
                 }else{
                     sql ="false";
                 }
-                System.out.println( "User Database: "+ ID + "- User Usuario: " +idValue +"-password Database:" +password +"-password Usuario:"+ passwordValue+ "---");
+                System.out.println( "---User Database: "+ ID + "---User Usuario: " +idValue +"---password Database: " +password +"---password Usuario:"+passwordValue+"---");
                
     return sql;          
     
