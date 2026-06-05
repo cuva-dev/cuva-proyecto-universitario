@@ -32,7 +32,7 @@ public class Validation {
                 }else{
                     sql ="false";
                 }
-                System.out.println( "---User Database: "+ ID + "---User Usuario: " +idValue +"---password Database: " +password +"---password Usuario:"+passwordValue+"---");
+                System.out.println( sql+"   ---User Database: "+ ID + "---User Usuario: " +idValue +"---password Database: " +password +"---password Usuario:"+passwordValue+"---");
                
     return sql;          
     
