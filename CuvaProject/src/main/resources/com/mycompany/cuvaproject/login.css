@@ -1,28 +1,69 @@
-
+/* FONDO DE LA PANTALLA DE LOGIN */
 .mainFxmlClass {
-    .root {
-    -fx-background-color: #f4f4f4;
+    /* Mantiene el fondo heredado de la unefa escalable al 100% */
+    -fx-background-image: url("image/unefa.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
 }
 
-/* Botón estilizado */
-.button {
-    -fx-background-color: #2196F3;
+/* LA TARJETA CENTRAL */
+.login-tarjeta {
+    -fx-background-color: rgba(255, 255, 255, 0.94); /* Fondo blanco semitransparente */
+    -fx-background-radius: 12;
+    -fx-border-color: #00008B;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 12, 0, 0, 4);
+}
+
+/* TEXTOS */
+.titulo-login {
+    -fx-text-fill: #070017;
+}
+
+.subtitulo-login {
+    -fx-text-fill: #555555;
+}
+
+.label-login {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #070017;
+}
+
+/* MENSAJE DE ERROR */
+.label-error {
+    -fx-text-fill: #D32F2F;
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* INPUTS (CAMPOS DE TEXTO) */
+.input-login {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6;
+}
+
+.input-login:focused {
+    -fx-border-color: #00008B;
+    -fx-border-width: 1.5;
+}
+
+/* BOTÓN INGRESAR */
+.boton-ingresar {
+    -fx-background-color: #00008B;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-background-radius: 5;
-    
-}
-
-.button:hover {
-    -fx-background-color: #1976D2;
     -fx-cursor: hand;
 }
 
-/* Campos de texto */
-.text-field {
-    -fx-background-radius: 5;
-    -fx-border-color: #ccc;
-    -fx-border-radius: 5;
-    -fx-padding: 8;
-}
+.boton-ingresar:hover {
+    -fx-background-color: #0000CD;
 }

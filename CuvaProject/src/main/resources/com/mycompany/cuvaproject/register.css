@@ -1,4 +1,75 @@
-
+/* FONDO RESPONSIVO GENERAL */
 .mainFxmlClass {
+    /* Cargamos la imagen de la UNEFA de fondo */
+    -fx-background-image: url("image/unefa.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}
 
+/* LA TARJETA DEL FORMULARIO */
+.formulario-tarjeta {
+    -fx-background-color: rgba(255, 255, 255, 0.92); /* Blanco con un toque sutil de transparencia */
+    -fx-background-radius: 10;
+    -fx-border-color: #00008B;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    /* Efecto de sombra difuminada para dar profundidad */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 5); 
+}
+
+/* TEXTOS Y CAMPOS */
+.titulo-registro {
+    -fx-text-fill: #120139;
+}
+
+.label-formulario {
+    -fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #010003;
+}
+
+.input-formulario {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #A0A0A0;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 4 8 4 8;
+}
+
+/* Evento de enfoque al hacer clic en un cuadro de texto */
+.input-formulario:focused {
+    -fx-border-color: #00008B;
+    -fx-border-width: 1.5;
+}
+
+/* BOTÓN REGISTRAR */
+.boton-registrar {
+    -fx-background-color: #00008B;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-registrar:hover {
+    -fx-background-color: #0000CD;
+}
+
+/* BOTÓN SALIR */
+.boton-salir {
+    -fx-background-color: #D32F2F; /* Rojo suave para la acción de salida */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-salir:hover {
+    -fx-background-color: #F44336;
 }

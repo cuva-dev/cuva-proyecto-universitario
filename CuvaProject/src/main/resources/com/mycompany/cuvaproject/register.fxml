@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.RegisterController">
-    <stylesheets>
-        <URL value="@com/mycompany/cuvaproject/image/UNEFA.jpg" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="850.0" styleClass="mainFxmlClass" stylesheets="@main.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.RegisterController">
    <children>
-      <Button layoutX="538.0" layoutY="432.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" opacity="0.67" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: darkblue;" text="Salir" textFill="#fcfafa" />
       
-      <ImageView fitHeight="448.0" fitWidth="237.0" layoutX="774.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="75.30801391601562" AnchorPane.leftAnchor="774.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="76.0">
-         <image>
-            <Image url="@image/unefa.png" />
-         </image>
-      </ImageView>
-  
-      <Label layoutX="489.0" layoutY="83.0" opacity="0.76" prefHeight="27.0" prefWidth="197.0" style="-fx-background-color: white;" text="Registrarse" textFill="#120139" underline="true">
-         <font>
-            <Font name="Arial" size="28.0" />
-         </font>
-      </Label>
-
-      <Label layoutX="413.0" layoutY="146.0" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: white;" text="Nombre :" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="name" layoutX="492.0" layoutY="145.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
-
-      <Label layoutX="413.0" layoutY="183.0" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: white;" text="Apellido :" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="lastname" layoutX="492.0" layoutY="182.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
-
-      <Label layoutX="368.0" layoutY="222.0" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: white;" text="Nombre usuario :" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="id" layoutX="492.0" layoutY="221.0" prefHeight="27.0" prefWidth="134.0" style="-fx-border-color: black;" />
-
-      <Label layoutX="395.0" layoutY="253.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: white;" text="Contraseña:" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <PasswordField fx:id="password" layoutX="492.0" layoutY="252.0" prefHeight="27.0" prefWidth="134.0" style="-fx-border-color: black;">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </PasswordField>
-
-      <Label layoutX="400.0" layoutY="288.0" prefHeight="18.0" prefWidth="76.0" style="-fx-background-color: white;" text="Confirmar :" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <PasswordField fx:id="password_two" layoutX="492.0" layoutY="284.0" prefHeight="27.0" prefWidth="134.0" style="-fx-border-color: black;">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </PasswordField>
-
-      <Label layoutX="419.0" layoutY="320.0" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: white;" text="Correo:" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="email" layoutX="492.0" layoutY="319.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
-
-      <Label layoutX="419.0" layoutY="359.0" prefHeight="18.0" prefWidth="46.0" style="-fx-background-color: white;" text="Cargo:" textFill="#010003">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="post" layoutX="492.0" layoutY="354.0" prefHeight="25.0" prefWidth="190.0" style="-fx-border-color: black;" />
+      <VBox alignment="CENTER" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            
+            <VBox alignment="TOP_CENTER" maxWidth="450.0" spacing="20.0" styleClass="formulario-tarjeta">
+               <padding>
+                  <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+               </padding>
+               <children>
+                  
+                  <Label styleClass="titulo-registro" text="Registrarse" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  
+                  <GridPane hgap="15.0" vgap="12.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="110.0" prefWidth="130.0" />
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="250.0" minWidth="170.0" prefWidth="230.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        
+                        <Label styleClass="label-formulario" text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="name" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        
+                        <Label styleClass="label-formulario" text="Apellido:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="lastname" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        
+                        <Label styleClass="label-formulario" text="Nombre usuario:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="id" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        
+                        <Label styleClass="label-formulario" text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <PasswordField fx:id="password" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        
+                        <Label styleClass="label-formulario" text="Confirmar:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <PasswordField fx:id="password_two" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        
+                        <Label styleClass="label-formulario" text="Correo:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="email" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        
+                        <Label styleClass="label-formulario" text="Cargo:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <TextField fx:id="post" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        
+                     </children>
+                  </GridPane>
+                  
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#handleUser" prefHeight="32.0" prefWidth="120.0" styleClass="boton-registrar" text="Registrar" />
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" styleClass="boton-salir" text="Salir" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  
+               </children>
+            </VBox>
+            
+         </children>
+      </VBox>
       
-      <Button fx:id="btnRegister" layoutX="522.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleUser" opacity="0.69" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: darkblue;" text="Registrar" textFill="#fcfafa" />
    </children>
 </AnchorPane>
