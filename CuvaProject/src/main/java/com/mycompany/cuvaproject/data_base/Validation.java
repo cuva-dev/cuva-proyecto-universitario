@@ -28,9 +28,9 @@ public class Validation {
             System.err.println("Error al consultar los datos: " + e.getMessage());
         }  
              if (idValue != ID || passwordValue != password){
-                    sql = "true, iniciando seccion";
+                    sql = "true";
                 }else{
-                    sql ="false, no se encuentra registrado";
+                    sql ="false";
                 }
                 System.out.println(ID + idValue + password +passwordValue);
                

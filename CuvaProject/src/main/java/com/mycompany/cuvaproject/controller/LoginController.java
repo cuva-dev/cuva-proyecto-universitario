@@ -27,7 +27,7 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Se ejecuta al cargar la vista
+
     }    
     
     
@@ -37,8 +37,8 @@ public class LoginController implements Initializable {
     @FXML
     private TextField password;
     
-    
-    private void hundleUser(){
+    @FXML
+    private void handleUser(ActionEvent event){
     
         String idValue = id.getText();
         String passwordValue = password.getText();
@@ -48,12 +48,13 @@ public class LoginController implements Initializable {
             throw new IllegalArgumentException("los campos no pueden estar vacios");
         }
 
-        System.out.printf(v.ValidationLogin(CMySQL, idValue, passwordValue)); // esto te debe decir si esta o en la base de datos 
+        System.out.printf(v.ValidationLogin(CMySQL, idValue, passwordValue));
         
+        if(v.ValidationLogin(CMySQL, idValue, passwordValue).equalsIgnoreCase("true")){accionBoton();}
     }
     
     @FXML
-    private void accionBoton(ActionEvent event) {
+    private void accionBoton() {
         try {
             
             
@@ -65,7 +66,6 @@ public class LoginController implements Initializable {
             currentScene.setRoot(root);
             
         } catch (IOException e) {
-            // El método load() obliga a manejar este error por si el archivo no existe
             System.err.println("Error al cargar la siguiente ventana: " + e.getMessage());
             e.printStackTrace();
         }
