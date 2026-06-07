@@ -28,11 +28,6 @@
                   
                   <VBox alignment="CENTER" spacing="5.0">
                      <children>
-                        <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@/com/mycompany/cuvaproject/UNEFA.jpg" />
-                           </image>
-                        </ImageView>
                         <Label styleClass="subtitulo-login" text="Inicia sesión">
                            <font>
                               <Font name="Arial Bold" size="21.0" />
@@ -67,13 +62,18 @@
                      </children>
                   </GridPane>
                   
-                  <Label fx:id="lblError" styleClass="label-error" text="" />
-                  
                   <Button fx:id="btnIngresar" mnemonicParsing="false" onAction="#handleUser" prefHeight="35.0" prefWidth="130.0" styleClass="boton-ingresar" text="Ingresar">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Button>
+                  <Button fx:id="BtnRegresar" mnemonicParsing="false" onAction="#accionRegresar" prefHeight="25.0" prefWidth="114.0" text="regresar">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  
+                  <Label fx:id="lblError" styleClass="label-error" text="" />
                   
                </children>
             </VBox>

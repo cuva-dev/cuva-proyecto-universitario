@@ -24,6 +24,8 @@ public class LoginController implements Initializable {
         
     @FXML
     private Button btnIngresar;
+    @FXML
+    private Button BtnRegresar;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -66,5 +68,26 @@ public class LoginController implements Initializable {
             System.err.println("Error al cargar la siguiente ventana: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+    
+    @FXML
+    private void accionRegresar(ActionEvent event){
+        
+        try{
+             
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/cuvaproject/main.fxml"));
+            Parent root = loader.load();
+            
+            Scene currentScene = BtnRegresar.getScene();
+            currentScene.setRoot(root);
+            
+        
+        }catch(IOException e){
+            
+            System.err.println("Error al cargar la siguiente ventana: " + e.getMessage());
+            e.printStackTrace();
+        }
+    
+    
     }
 }

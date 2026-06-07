@@ -1,4 +1,4 @@
-package com.mycompany.cuvaproject.controller;
+ package com.mycompany.cuvaproject.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +20,8 @@ public class RegisterController implements Initializable {
     
     @FXML
     private Button btnRegister;
+    @FXML
+    private Button btnRegresar;
     
     @FXML
     private TextField name;
@@ -82,6 +84,27 @@ public class RegisterController implements Initializable {
             System.err.println("[Error] No se pudo cargar la vista prueba.fxml. Verifica la ruta.");
             e.printStackTrace();
         }
+    }
+    
+    @FXML
+    private void accionRegresar(ActionEvent event){
+        
+        try{
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/cuvaproject/main.fxml"));
+            Parent root = loader.load();
+            
+            Scene currentScene = btnRegresar.getScene();
+            currentScene.setRoot(root);
+            
+        
+        }catch(IOException e){
+            
+            System.err.println("Error al cargar la siguiente ventana: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        
     }
     
     @Override
