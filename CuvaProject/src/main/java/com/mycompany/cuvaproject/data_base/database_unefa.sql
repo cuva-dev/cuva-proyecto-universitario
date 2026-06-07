@@ -9,7 +9,7 @@ create table if not exists User
 (
 Name varchar(100),
 LastName varchar(100),
-UserName varchar(50) primary key not null,
+ID varchar(50) primary key not null,
 Email varchar(50) not null unique,
 Password varchar(15),
 Post varchar(50)
