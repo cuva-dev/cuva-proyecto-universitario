@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="973.0" styleClass="fondo_imagen" stylesheets="@Ventana.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.VentanaController" fx:id="mainContainer" >
+<BorderPane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="973.0" styleClass="fondo_imagen" stylesheets="@Ventana.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.VentanaController">
    <left>
       <VBox alignment="TOP_CENTER" maxWidth="282.0" prefHeight="642.0" prefWidth="274.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 0 20 20 0; -fx-border-color: rgba(255,255,255,0.3) transparent transparent; -fx-border-width: 2;" BorderPane.alignment="CENTER">
          <children>
@@ -24,9 +24,7 @@
                   <Font size="34.0" />
                </font>
             </Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" stylesheets="@Ventana.css" text="BITÁCORA" onAction="#showBinnacle" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="220.0" stylesheets="@Ventana.css" text="ESTUDIANTES" wrapText="true" onAction="#showStudients" />
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="218.0" text="Registrar Nuevo Usuario" onAction="#registerUser" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" mnemonicParsing="false" onAction="#showBinnacle" prefHeight="50.0" prefWidth="220.0" stylesheets="@Ventana.css" text="BITÁCORA" />
             <Separator prefHeight="0.0" prefWidth="252.0" />
             <Label prefHeight="50.0" prefWidth="150.0" style="-fx-text-fill: #94a3b8; -fx-font-weight: bold; -fx-font-size: 40;" text="C.U.V.A" textAlignment="CENTER" textFill="#0b1b5c">
                <font>
@@ -35,7 +33,7 @@
             </Label>
             <Separator prefHeight="0.0" prefWidth="252.0" />
             
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #00a3e0;" styleClass="cerrarSesion" stylesheets="@Ventana.css" text="Cerrar Sesión" onAction="#closeSesion" />
+            <Button mnemonicParsing="false" onAction="#closeSesion" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #00a3e0;" styleClass="cerrarSesion" stylesheets="@Ventana.css" text="Cerrar Sesión" />
          </children>
          <padding>
             <Insets bottom="20.0" left="15.0" right="15.0" top="20.0" />
