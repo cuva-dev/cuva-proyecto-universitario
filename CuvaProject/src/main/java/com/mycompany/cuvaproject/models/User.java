@@ -1,4 +1,6 @@
-    package com.mycompany.cuvaproject.models;
+//alskjdlaksjd
+
+package com.mycompany.cuvaproject.models;
 
 import com.mycompany.cuvaproject.data_base.Data_Manipulator;
 import com.mycompany.cuvaproject.data_base.ConnectionMySQL;
