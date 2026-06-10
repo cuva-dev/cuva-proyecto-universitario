@@ -1,7 +1,44 @@
-/*
- * Empty Stylesheet file.
- */
-
+/* Estilos globales para el panel principal con FONDO RESPONSIVO */
 .mainFxmlClass {
+    /* 1. Cargamos la imagen desde tu carpeta de recursos */
+    -fx-background-image: url("Image/Image_3trdoy3trdoy3trd.png");
+    
+    /* 2. Evitamos que la imagen se repita como mosaico si la pantalla es gigante */
+    -fx-background-repeat: no-repeat;
+    
+    /* 3. Centramos la imagen en la ventana */
+    -fx-background-position: center center;
+    
+    /* 4. CLAVE RESPONSIVE: 'stretch' estira la imagen al 100% de la ventana.
+          Si prefieres que mantenga la proporción estricta cortando los bordes excedentes, 
+          puedes cambiar "stretch" por "cover". */
+    -fx-background-size: stretch; 
+}
 
+/* BOTÓN INGRESAR (Azul Oscuro) */
+.boton-primario {
+    -fx-background-color: #00008B;
+    -fx-text-fill: #ebe6e6;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-primario:hover {
+    -fx-background-color: #0000CD;
+}
+
+
+.boton-secundario {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #00008B;
+    -fx-border-color: #00008B;
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-secundario:hover {
+    -fx-background-color: #f0f4f8;
 }

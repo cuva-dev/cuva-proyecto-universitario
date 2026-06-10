@@ -10,7 +10,7 @@
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" snapToPixel="false" styleClass="mainFxmlClass" stylesheets="@main.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.MainController">
    <children>
       
-      <VBox alignment="CENTER" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="350.0" prefWidth="695.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button id="btnIngresar" fx:id="btnIngresar" mnemonicParsing="false" onAction="#accionBoton" prefHeight="38.0" prefWidth="160.0" styleClass="boton-primario" text="Ingresar">
                <font>
