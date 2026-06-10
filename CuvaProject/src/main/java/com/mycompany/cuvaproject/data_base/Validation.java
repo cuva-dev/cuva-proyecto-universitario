@@ -5,9 +5,6 @@ import java.sql.Connection; // maneja la conexión a la base de datos
 import java.sql.ResultSet; // maneja los resultados de las consultas SQL
 import java.sql.SQLException; // maneja los errores relacionados con SQL
 
-
-import com.mycompany.cuvaproject.models.User;
-
 public class Validation {
 
     public String ValidationLogin(ConnectionMySQL CMySQL,String idValue,String passwordValue){
@@ -32,9 +29,30 @@ public class Validation {
                 }else{
                     sql ="false";
                 }
-                System.out.println( sql+"   ---User Database: "+ ID + "---User Usuario: " +idValue +"---password Database: " +password +"---password Usuario:"+passwordValue+"---");
-               
-    return sql;          
-    
+               // System.out.println( sql+"   ---User Database: "+ ID + "---User Usuario: " +idValue +"---password Database: " +password +"---password Usuario:"+passwordValue+"---");
+    return sql;
+    }
+
+    public boolean ValidationRegister(ConnectionMySQL CMySQL,String idValue,String emailValue){
+
+    String sql= "SELECT ID,email FROM User WHERE ID = '"+idValue+"'";
+    String ID="",email="";
+    try(Connection conn = CMySQL.conectarMySQL();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery()){
+             while (rs.next()) {
+            ID = rs.getString("ID");
+            email = rs.getString("email");
+             }
+        }catch (SQLException e) {
+            System.err.println("Error al consultar los datos: " + e.getMessage());
+        }
+
+    if (idValue.equals(ID) || emailValue.equals(email)){
+        return true;
+            }else{
+            return false;
+    }
 }
+    
 }
