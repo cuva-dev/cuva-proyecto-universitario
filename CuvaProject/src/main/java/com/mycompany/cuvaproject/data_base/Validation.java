@@ -35,24 +35,20 @@ public class Validation {
 
     public boolean ValidationRegister(ConnectionMySQL CMySQL,String idValue,String emailValue){
 
-    String sql= "SELECT ID,email FROM User WHERE ID = '"+idValue+"'";
+    String sql= "SELECT ID,email FROM User WHERE ID = '"+idValue+"' or Email = '"+emailValue+"'";
     String ID="",email="";
     try(Connection conn = CMySQL.conectarMySQL();
         PreparedStatement stmt = conn.prepareStatement(sql);
         ResultSet rs = stmt.executeQuery()){
-             while (rs.next()) {
-            ID = rs.getString("ID");
-            email = rs.getString("email");
+            if(rs.next()) {
+        System.out.println("usuario ya existe");
+        return true;
              }
         }catch (SQLException e) {
             System.err.println("Error al consultar los datos: " + e.getMessage());
         }
-
-    if (idValue.equals(ID) || emailValue.equals(email)){
-        return true;
-            }else{
+        System.out.println("usuario no existente");
             return false;
     }
-}
     
 }
