@@ -12,15 +12,21 @@
       
       <VBox alignment="CENTER" prefHeight="350.0" prefWidth="695.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button id="btnIngresar" fx:id="btnIngresar" mnemonicParsing="false" onAction="#accionBoton" prefHeight="38.0" prefWidth="160.0" styleClass="boton-primario" text="Ingresar">
+            <Button id="btnIngresar" fx:id="btnIngresar" mnemonicParsing="false" onAction="#accionBoton" prefHeight="25.0" prefWidth="140.0" styleClass="boton-primario" text="Ingresar">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="-15.0" />
+               </VBox.margin>
             </Button>
-            <Button id="btnRegistrarse" mnemonicParsing="false" onAction="#actionRegister" prefHeight="38.0" prefWidth="160.0" styleClass="boton-secundario" text="Registrarse" textAlignment="JUSTIFY">
+            <Button id="btnRegistrarse" mnemonicParsing="false" onAction="#actionRegister" prefHeight="25.0" prefWidth="140.0" styleClass="boton-secundario" text="Registrarse" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="-150.0" />
+               </VBox.margin>
             </Button>
          </children>
          <padding>
