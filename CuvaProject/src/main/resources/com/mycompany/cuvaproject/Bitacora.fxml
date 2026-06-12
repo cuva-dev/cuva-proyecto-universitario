@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="com.mycompany.cuvaproject.controller.BitacoraController">
+<AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1390.0" prefHeight="350.0" prefWidth="695.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.BitacoraController">
     <stylesheets>
         <URL value="@/com/mycompany/cuvaproject/bitacora.css" />
     </stylesheets>
    <children>
-      <Label layoutX="20.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: while;" text="Bitacora" textFill="#100232">
+      <ImageView fitHeight="700.0" fitWidth="1390.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/fondo%20menu.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="607.0" layoutY="324.0" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: while;" text="No existe usuario registrado...!" textFill="#1c045e">
          <font>
-            <Font name="Arial" size="22.0" />
+            <Font name="Arial" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="71.0" layoutY="132.0" prefHeight="26.0" prefWidth="368.0" style="-fx-background-color: while;" text="No existe usuario registrado...!" textFill="#100232">
+      <Label layoutX="106.0" layoutY="44.0" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: while;" text="Bitacora:" textFill="#020265" wrapText="true">
          <font>
-            <Font name="Arial" size="10.0" />
+            <Font name="Arial Bold" size="28.0" />
          </font>
       </Label>
+      <Button layoutX="96.0" layoutY="626.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showBinnacle" prefHeight="25.0" prefWidth="110.0" stylesheets="@Ventana.css" text="Salir">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
