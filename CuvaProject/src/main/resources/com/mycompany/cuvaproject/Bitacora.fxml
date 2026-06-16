@@ -8,27 +8,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1390.0" prefHeight="350.0" prefWidth="695.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.BitacoraController">
+<AnchorPane id="AnchorPane" fx:id="bitacoraRoot" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.BitacoraController">
     <stylesheets>
         <URL value="@/com/mycompany/cuvaproject/bitacora.css" />
     </stylesheets>
    <children>
-      <ImageView fitHeight="700.0" fitWidth="1390.0" pickOnBounds="true">
+      <ImageView fitHeight="700.0" fitWidth="1390.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@image/fondo%20menu.jpeg" />
          </image>
       </ImageView>
-      <Label layoutX="607.0" layoutY="324.0" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: while;" text="No existe usuario registrado...!" textFill="#1c045e">
-         <font>
-            <Font name="Arial" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="106.0" layoutY="44.0" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: while;" text="Bitacora:" textFill="#020265" wrapText="true">
+      
+      <Label layoutX="60.0" layoutY="40.0" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="Bitacora:" textFill="#020265" wrapText="true" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="40.0">
          <font>
             <Font name="Arial Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="96.0" layoutY="626.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showBinnacle" prefHeight="25.0" prefWidth="110.0" stylesheets="@Ventana.css" text="Salir">
+      
+      <Label layoutX="400.0" layoutY="285.0" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: transparent;" text="No existe usuario registrado...!" textFill="#1c045e" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      
+      <Button layoutX="60.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" stylesheets="@Ventana.css" text="Salir" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="60.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

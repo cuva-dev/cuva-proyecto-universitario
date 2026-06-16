@@ -63,23 +63,40 @@ public class VentanaController implements Initializable {
 
   
     private void changeView(String fxmlPath) {
-        try {
-            System.out.println("[Navbar] Intentando cambiar vista interna a: " + fxmlPath);
+    try {
+        System.out.println("[Navbar] Intentando cambiar vista interna a: " + fxmlPath);
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        Parent subView = loader.load();
+        
+        // ================================================================
+        // TRUCO DE FUERZA BRUTA: Forzar al subView a ser responsivo
+        // ================================================================
+        if (subView instanceof javafx.scene.layout.Region) {
+            javafx.scene.layout.Region region = (javafx.scene.layout.Region) subView;
             
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-            Parent subView = loader.load();
+            // Le quitamos cualquier tamaño máximo o mínimo rígido que traiga el FXML
+            region.setMinWidth(javafx.scene.layout.Region.USE_COMPUTED_SIZE);
+            region.setMinHeight(javafx.scene.layout.Region.USE_COMPUTED_SIZE);
+            region.setMaxWidth(Double.MAX_VALUE);
+            region.setMaxHeight(Double.MAX_VALUE);
             
-
-            mainContainer.setCenter(subView);
-            
-            System.out.println("[Navbar] ¡Vista interna cambiada con éxito!");
-            
-        } catch (IOException e) {
-            System.err.println("[Error] No se pudo cargar el archivo FXML en la ruta: " + fxmlPath);
-            System.err.println("[Error] Verifica que el nombre del archivo esté bien escrito y en su carpeta correcta.");
-            e.printStackTrace();
-        } catch (NullPointerException e) {
-            System.err.println("[Error] La ruta proporcionada es nula o el archivo no existe en resources.");
+            // Forzamos a que use todo el espacio disponible
+            region.setPrefWidth(mainContainer.getCenter() != null ? mainContainer.getCenter().getBoundsInLocal().getWidth() : 1000);
+            region.setPrefHeight(mainContainer.getCenter() != null ? mainContainer.getCenter().getBoundsInLocal().getHeight() : 600);
         }
+        // ================================================================
+
+        // Inyectamos la vista en el centro del BorderPane
+        mainContainer.setCenter(subView);
+        
+        System.out.println("[Navbar] ¡Vista interna cambiada con éxito!");
+        
+    } catch (IOException e) {
+        System.err.println("[Error] No se pudo cargar el archivo FXML en la ruta: " + fxmlPath);
+        e.printStackTrace();
+    } catch (NullPointerException e) {
+        System.err.println("[Error] La ruta proporcionada es nula o el archivo no existe en resources.");
     }
+}
 }
