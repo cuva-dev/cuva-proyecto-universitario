@@ -36,10 +36,9 @@ public class Validation {
     public boolean ValidationRegister(ConnectionMySQL CMySQL,String idValue,String emailValue){
 
     String sql= "SELECT ID,email FROM User WHERE ID = '"+idValue+"' or Email = '"+emailValue+"'";
-    String ID="",email="";
     try(Connection conn = CMySQL.conectarMySQL();
-        PreparedStatement stmt = conn.prepareStatement(sql);
-        ResultSet rs = stmt.executeQuery()){
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        ResultSet rs = pstmt.executeQuery()){
             if(rs.next()) {
         System.out.println("usuario ya existe");
         return true;
