@@ -2,6 +2,7 @@ package com.mycompany.cuvaproject.controller;
 
 import com.mycompany.cuvaproject.data_base.Validation;
 import com.mycompany.cuvaproject.data_base.ConnectionMySQL;
+import com.mycompany.cuvaproject.data_base.Data_Manipulator;
 
 import java.io.IOException;  
 import java.net.URL;
@@ -21,6 +22,7 @@ public class LoginController implements Initializable {
     
     Validation v = new Validation();
     ConnectionMySQL CMySQL = new ConnectionMySQL();
+    Data_Manipulator ObjDataM = new Data_Manipulator();
         
     @FXML
     private Button btnIngresar;
@@ -49,7 +51,7 @@ public class LoginController implements Initializable {
         if (idValue.isEmpty() || passwordValue.isEmpty()) {
             throw new IllegalArgumentException("los campos no pueden estar vacios");
         }
-        if(v.ValidationLogin(CMySQL, idValue, passwordValue,DataM).equalsIgnoreCase("true")){accionBoton();}
+        if(v.ValidationLogin(CMySQL, idValue, passwordValue,ObjDataM).equalsIgnoreCase("true")){accionBoton();}
     }
     
     @FXML
