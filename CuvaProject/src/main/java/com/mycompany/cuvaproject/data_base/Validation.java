@@ -7,7 +7,7 @@ import java.sql.SQLException; // maneja los errores relacionados con SQL
 
 public class Validation {
 
-    public String ValidationLogin(ConnectionMySQL CMySQL,String idValue,String passwordValue){
+    public String ValidationLogin(ConnectionMySQL CMySQL,String idValue,String passwordValue,Data_Manipulator DataM){
         
         String ID = "",password="";
         String sql = "SELECT ID,Password FROM User WHERE ID = '"+idValue+"'";
@@ -26,6 +26,7 @@ public class Validation {
         }  
              if (idValue.equals(ID) && passwordValue.equals(password)){
                     sql = "true";
+                 DataM.InsertTableBitacora(CMySQL, ID, "inicio de sesión");
                 }else{
                     sql ="false";
                 }
