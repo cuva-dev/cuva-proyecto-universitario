@@ -68,9 +68,9 @@ period varchar(50)
 -- tabla bitacora
 create table if not exists Bitacora
 (
-login timestamp , -- año,mes,dia,hora,minuto,seg
+time timestamp , -- año,mes,dia,hora,minuto,seg
 IDUser varchar(100),
-accion varchar(300),
+action varchar(300),
 foreign key (IDUser) references User(ID)
 
 );
@@ -82,8 +82,8 @@ IDSemester int,
 CodeSubject varchar(50),
 foreign key (CodeSubject) references Subject(code),
 foreign key (IDSemester) references Semester(IDS),
-prelacion varchar(50),
-prelacion2 varchar(50)
+priority varchar(50),
+priority2 varchar(50)
 
 );
 
@@ -147,7 +147,7 @@ INSERT INTO Subject (code, name, Unit_Credit, IDSemester) VALUES
 ("TTC-31154", "TELEPROCESOS", 3, "10"),
 ("TGR-30010", "TRABAJO ESPECIAL DE GRADO", 0, "10");
 
-insert into pensum(IDSemester,CodeSubject,prelacion,prelacion2) values
+insert into pensum(IDSemester,CodeSubject,priority,priority2) values
 ("1", "ADG-25132", "", ""),
 ("1", "ADG-25123", "", ""),
 ("1", "IDM-24113", "", ""),
