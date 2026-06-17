@@ -14,6 +14,7 @@ public class Reprobated {
     private String codeSubject;
     private String period; // NUEVO: Para guardar el periodo (Ej: 1-2023)
     private String grade;  // NUEVO: String para soportar "05" o textos como "INASISTENCIA"
+        
 
     public Reprobated(String nameStudent, String nameSubject, String IDStudent, String codeSubject, String period, String grade) {
         this.IDStudent = IDStudent;
@@ -22,6 +23,7 @@ public class Reprobated {
         this.nameSubject = nameSubject;
         this.period = period;
         this.grade = grade;
+        ObjDataM.InsertTableReprobated(ObjCMySQL,this);
     }
 
     // Getters
@@ -88,7 +90,5 @@ public class Reprobated {
         validate_IDStudent();
         validate_period();
         validate_grade();
-
-        ObjDataM.InsertTableReprobated(ObjCMySQL,this);
     }
 }
