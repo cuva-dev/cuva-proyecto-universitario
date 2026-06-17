@@ -12,31 +12,31 @@
 
 <BorderPane fx:id="mainContainer" minHeight="700.0" minWidth="1390.0" prefHeight="720.0" prefWidth="1400.0" style="-fx-background-color: white;" styleClass="fondo_imagen" stylesheets="@Ventana.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.VentanaController">
    <left>
-      <VBox alignment="TOP_CENTER" maxWidth="327.0" prefHeight="660.0" prefWidth="327.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 0 20 20 0; -fx-border-color: rgba(255,255,255,0.3) transparent transparent; -fx-border-width: 2;" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" maxWidth="1390.0" prefHeight="680.0" prefWidth="323.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 0 20 20 0; -fx-border-color: rgba(255,255,255,0.3) transparent transparent; -fx-border-width: 2;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="180.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="260.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/unefa.png" />
                </image>
             </ImageView>
-            <Button maxHeight="35.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="35.0" prefWidth="237.0" stylesheets="@Ventana.css" text="ESCANEAR">
+            <Button maxHeight="35.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="237.0" stylesheets="@Ventana.css" text="ESCANEAR">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button maxHeight="35.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showBinnacle" prefHeight="35.0" prefWidth="150.0" stylesheets="@Ventana.css" text="BITÁCORA">
+            <Button maxHeight="35.0" maxWidth="300.0" mnemonicParsing="false" onAction="#showBinnacle" prefHeight="35.0" prefWidth="150.0" stylesheets="@Ventana.css" text="BITÁCORA">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
             <Separator prefHeight="0.0" prefWidth="252.0" />
-            <Label prefHeight="131.0" prefWidth="163.0" style="-fx-text-fill: #94a3b8; -fx-font-weight: bold; -fx-font-size: 40;" text="C.U.V.A" textAlignment="CENTER" textFill="#0b1b5c" wrapText="true">
+            <Label prefHeight="62.0" prefWidth="163.0" style="-fx-text-fill: #94a3b8; -fx-font-weight: bold; -fx-font-size: 40;" text="C.U.V.A" textAlignment="CENTER" textFill="#0b1b5c" wrapText="true">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
             <Separator prefHeight="0.0" prefWidth="252.0" />
-            <Button mnemonicParsing="false" onAction="#closeSesion" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #00a3e0;" styleClass="cerrarSesion" stylesheets="@Ventana.css" text="Cerrar Sesión">
+            <Button maxWidth="300.0" mnemonicParsing="false" onAction="#closeSesion" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #00a3e0;" styleClass="cerrarSesion" stylesheets="@Ventana.css" text="Cerrar Sesión">
                <font>
                   <Font size="14.0" />
                </font>
