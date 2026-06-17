@@ -49,7 +49,7 @@ public class LoginController implements Initializable {
         if (idValue.isEmpty() || passwordValue.isEmpty()) {
             throw new IllegalArgumentException("los campos no pueden estar vacios");
         }
-        if(v.ValidationLogin(CMySQL, idValue, passwordValue).equalsIgnoreCase("true")){accionBoton();}
+        if(v.ValidationLogin(CMySQL, idValue, passwordValue,DataM).equalsIgnoreCase("true")){accionBoton();}
     }
     
     @FXML
