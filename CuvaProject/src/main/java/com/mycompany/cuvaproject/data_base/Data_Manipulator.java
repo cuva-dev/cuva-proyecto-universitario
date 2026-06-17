@@ -3,6 +3,8 @@ import java.sql.Connection; // maneja la conexión a la base de datos
 import java.sql.PreparedStatement;// permite ejecutar consultas SQL con parámetros
 import java.sql.ResultSet; // maneja los resultados de las consultas SQL
 import java.sql.SQLException; // maneja los errores relacionados con SQL
+import java.sql.Timestamp;
+import java.util.ArrayList;
 
 import com.mycompany.cuvaproject.models.User;
 import com.mycompany.cuvaproject.models.Student;
