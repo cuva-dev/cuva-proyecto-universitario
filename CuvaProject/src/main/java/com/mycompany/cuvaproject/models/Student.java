@@ -1,6 +1,13 @@
 package com.mycompany.cuvaproject.models;
 
+import com.mycompany.cuvaproject.data_base.Data_Manipulator;
+import com.mycompany.cuvaproject.data_base.ConnectionMySQL;
+
     public class Student {
+        
+        ConnectionMySQL ObjCMySQL = new ConnectionMySQL();
+        Data_Manipulator ObjDataM = new Data_Manipulator();
+        
      //aa
         private String name;
         private String lastName;
@@ -14,6 +21,8 @@ package com.mycompany.cuvaproject.models;
             this.Career = Career;
             this.ID = ID;
             this.Tuition = Tuition;
+
+             ObjDataM.InsertTableStudent(ObjCMySQL,this);
         }
 
         // getters
