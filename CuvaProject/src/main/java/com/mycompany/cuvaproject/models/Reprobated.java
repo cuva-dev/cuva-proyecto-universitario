@@ -89,6 +89,6 @@ public class Reprobated {
         validate_period();
         validate_grade();
 
-        ObjDataM.ObjDataM.InsertTableReprobated(ObjCMySQL,this);
+        ObjDataM.InsertTableReprobated(ObjCMySQL,this);
     }
 }
