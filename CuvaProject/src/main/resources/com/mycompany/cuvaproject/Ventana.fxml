@@ -19,7 +19,7 @@
                   <Image url="@image/unefa.png" />
                </image>
             </ImageView>
-            <Button maxHeight="35.0" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="237.0" stylesheets="@Ventana.css" text="ESCANEAR">
+            <Button maxHeight="35.0" maxWidth="300.0" mnemonicParsing="false" onAction="#showStudients" prefHeight="35.0" prefWidth="237.0" stylesheets="@Ventana.css" text="ESCANEO">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

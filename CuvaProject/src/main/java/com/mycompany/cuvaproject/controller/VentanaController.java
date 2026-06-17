@@ -69,25 +69,21 @@ public class VentanaController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent subView = loader.load();
         
-        // ================================================================
-        // TRUCO DE FUERZA BRUTA: Forzar al subView a ser responsivo
-        // ================================================================
+        
         if (subView instanceof javafx.scene.layout.Region) {
             javafx.scene.layout.Region region = (javafx.scene.layout.Region) subView;
             
-            // Le quitamos cualquier tamaño máximo o mínimo rígido que traiga el FXML
             region.setMinWidth(javafx.scene.layout.Region.USE_COMPUTED_SIZE);
             region.setMinHeight(javafx.scene.layout.Region.USE_COMPUTED_SIZE);
             region.setMaxWidth(Double.MAX_VALUE);
             region.setMaxHeight(Double.MAX_VALUE);
             
-            // Forzamos a que use todo el espacio disponible
             region.setPrefWidth(mainContainer.getCenter() != null ? mainContainer.getCenter().getBoundsInLocal().getWidth() : 1000);
             region.setPrefHeight(mainContainer.getCenter() != null ? mainContainer.getCenter().getBoundsInLocal().getHeight() : 600);
         }
         // ================================================================
 
-        // Inyectamos la vista en el centro del BorderPane
+
         mainContainer.setCenter(subView);
         
         System.out.println("[Navbar] ¡Vista interna cambiada con éxito!");
