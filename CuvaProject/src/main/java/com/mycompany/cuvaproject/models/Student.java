@@ -22,7 +22,7 @@ import com.mycompany.cuvaproject.data_base.ConnectionMySQL;
             this.ID = ID;
             this.Tuition = Tuition;
 
-             ObjDataM.InsertTableStudent(ObjCMySQL,this);
+             ObjDataM.InsertTableStudent(ObjCMySQL,this;"pruebaidparabitacora");
         }
 
         // getters
