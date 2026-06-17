@@ -61,7 +61,7 @@ IDStudent varchar(50),
 CodeSubject varchar(100),
 -- foreign key (IDStudent) references Student(ID),
 -- foreign key (CodeSubject) references Subject(code),
-qualification varchar(50),
+grade varchar(50),
 period varchar(50)
 );
 
