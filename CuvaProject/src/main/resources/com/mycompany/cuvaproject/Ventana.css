@@ -1,23 +1,88 @@
-.button {
-
-    -fx-background-color: #002d72; 
-    -fx-text-fill: white; 
-    -fx-font-weight: bold; 
-    -fx-font-size: 14;
-    
-    
-    -fx-background-radius: 10; 
-    -fx-cursor: hand;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 5, 0, 0, 2);
-}
-
-.fondo_imagen {
-    -fx-background-image: url("image/fondo.jpg");
+/* =========================
+   FONDO PRINCIPAL
+========================= */
+#mainContainer {
+    -fx-background-image: url("image/fondo%20menu.jpeg");
+    -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center center;
-    -fx-background-size: cover; 
+    -fx-background-position: center;
 }
-.cerrarSesion:hover {
-    -fx-background-color: #0044a7; 
-    -fx-effect: dropshadow(three-pass-box, rgba(0,68,167,0.4), 10, 0, 0, 4);
+
+/* =========================
+   MENÚ LATERAL
+========================= */
+.menu-lateral {
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 0% 100%,
+        #0b1b3a,
+        #0f2f6b,
+        #1a4fb3
+    );
+
+    -fx-pref-width: 340px;
+    -fx-min-width: 320px;
+
+    -fx-spacing: 20;
+    -fx-alignment: top-center;
+
+    -fx-background-radius: 0 20 20 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 15, 0, 0, 5);
+}
+
+/* =========================
+   BOTONES MENU
+========================= */
+.boton-menu {
+    -fx-pref-width: 260px;
+    -fx-pref-height: 45px;
+
+    -fx-background-color: #2b2f3a;
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.boton-menu:hover {
+    -fx-background-color: #3b4a6b;
+}
+
+/* =========================
+   BOTÓN CERRAR SESIÓN
+========================= */
+.boton-cerrar-sesion {
+    -fx-pref-width: 260px;
+    -fx-pref-height: 45px;
+
+    -fx-background-color: #00a3e0;
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.boton-cerrar-sesion:hover {
+    -fx-background-color: #4dbcf0;
+}
+
+/* =========================
+   TEXTO MARCA
+========================= */
+.texto-marca {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+/* =========================
+   SEPARADORES
+========================= */
+.separador-menu {
+    -fx-background-color: rgba(255,255,255,0.3);
 }
