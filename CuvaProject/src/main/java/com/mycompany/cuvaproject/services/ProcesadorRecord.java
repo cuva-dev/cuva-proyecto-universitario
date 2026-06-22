@@ -100,7 +100,7 @@ public class ProcesadorRecord {
         System.out.println();
 
         // Extraemos e imprimimos el listado de reprobados real
-        List<Reprobated> reprobadas = extraerMateriasReprobadas(textoBruto);
+        List<Reprobated> reprobadas = extraerMateriasReprobadas(textoBruto, idInt);
         
         System.out.println("[NUEVOS OBJETOS -> REPROBATED] -> Total Encontrados: " + reprobadas.size());
         System.out.println("====================================================================");
@@ -109,7 +109,7 @@ public class ProcesadorRecord {
     /**
      * Analiza el historial académico extrayendo exclusivamente las materias reprobadas.
      */
-    public List<Reprobated> extraerMateriasReprobadas(String textoBruto) {
+    public List<Reprobated> extraerMateriasReprobadas(String textoBruto, int idInt) {
         List<Reprobated> listaReprobadas = new ArrayList<>();
         String textoNorm = textoBruto.replaceAll("\\s+", " ");
         
@@ -207,11 +207,12 @@ public class ProcesadorRecord {
                     }
                     
                     // Instanciamos el objeto con la firma del modelo
-                    Reprobated materiaAplazada = new Reprobated(period, semester, code, nameSubject, notaFinal, observacion);
+                 
+                    Reprobated materiaAplazada = new Reprobated(null,nameSubject, String.valueOf(idInt), code, period, notaFinal);
                     listaReprobadas.add(materiaAplazada);
 
-                    // Muestra la confirmación en consola
-                    System.out.println("  -> [" + period + "] " + code + " - " + nameSubject + " | Nota: " + notaFinal);
+                    //impresión en terminal para comprobar que los datos se extrajeron bien
+                    System.out.println("  -> CI: " + idInt + " [" + period + "] " + code + " | Nota: " + notaFinal);
                 }
             }
         }
