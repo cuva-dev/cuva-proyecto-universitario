@@ -245,7 +245,7 @@ public class Data_Manipulator {
     // este metodo no guarda en la bitacora, ya que es automatio con el scanner de reprobados
     public void InsertTableReprobated(ConnectionMySQL CMySQL,Reprobated rep){
 
-        String sql = "INSERT INTO Reprobated (CodeSubject,grade,period) VALUES ('"+rep.getCodeSubject()+"','"+rep.getGrade()+"','"+rep.getPeriod()+"')";
+        String sql = "INSERT INTO Reprobated (IDStudent,CodeSubject,qualification,period) VALUES ('"+rep.getIDStudent()+"','"+rep.getCodeSubject()+"','"+rep.getGrade()+"','"+rep.getPeriod()+"')";
 
         try (Connection conn = CMySQL.conectarMySQL()) {
 
