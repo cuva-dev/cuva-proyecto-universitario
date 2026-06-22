@@ -1,75 +1,72 @@
-/* FONDO RESPONSIVO GENERAL */
 .mainFxmlClass {
-    /* Cargamos la imagen de la UNEFA de fondo */
-    -fx-background-image: url("image/unefa.png");
+    -fx-background-image: url("image/Image_3trdoy3trdoy3trd.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
-    -fx-background-size: stretch;
+    -fx-background-size: stretch; 
 }
 
-/* LA TARJETA DEL FORMULARIO */
-.formulario-tarjeta {
-    -fx-background-color: rgba(255, 255, 255, 0.92); /* Blanco con un toque sutil de transparencia */
-    -fx-background-radius: 10;
-    -fx-border-color: #00008B;
-    -fx-border-width: 1.5;
-    -fx-border-radius: 10;
-    /* Efecto de sombra difuminada para dar profundidad */
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 5); 
-}
-
-/* TEXTOS Y CAMPOS */
-.titulo-registro {
-    -fx-text-fill: #120139;
-}
-
-.label-formulario {
-    -fx-font-family: "Arial";
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #010003;
-}
-
+/* --- ESTILOS PARA LOS TEXTFIELD Y PASSWORDFIELD --- */
 .input-formulario {
-    -fx-background-color: #FFFFFF;
-    -fx-border-color: #A0A0A0;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
-    -fx-padding: 4 8 4 8;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 6px 10px;
+    -fx-text-fill: #1e293b;
 }
-
-/* Evento de enfoque al hacer clic en un cuadro de texto */
 .input-formulario:focused {
     -fx-border-color: #00008B;
-    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 139, 0.25), 8, 0, 0, 0);
 }
 
-/* BOTÓN REGISTRAR */
+/* --- ESTILOS PARA EL COMBOBOX CORREGIDO --- */
+.combo-formulario {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 0px; /* Quitamos el padding de aquí para que no colapse el texto */
+}
+
+.combo-formulario:focused {
+    -fx-border-color: #00008B;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 139, 0.25), 8, 0, 0, 0);
+}
+
+/* Fuerza el estilo tanto para la selección como para el estado inicial/vacío */
+.combo-formulario .list-cell,
+.combo-formulario:empty {
+    -fx-text-fill: #110000 !important;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 4px 0px 4px 10px; /* El padding se controla desde adentro con seguridad */
+}
+
+/* --- ESTILOS PARA LOS BOTONES --- */
 .boton-registrar {
     -fx-background-color: #00008B;
-    -fx-text-fill: #FFFFFF;
-    -fx-font-family: "Arial";
-    -fx-font-weight: bold;
-    -fx-font-size: 13px;
+    -fx-text-fill: #ebe6e6 !important;
     -fx-background-radius: 5;
+    -fx-border-radius: 5;
     -fx-cursor: hand;
 }
-
 .boton-registrar:hover {
     -fx-background-color: #0000CD;
 }
 
-/* BOTÓN SALIR */
 .boton-salir {
-    -fx-background-color: #D32F2F; /* Rojo suave para la acción de salida */
-    -fx-text-fill: #FFFFFF;
-    -fx-font-family: "Arial";
-    -fx-font-weight: bold;
-    -fx-font-size: 13px;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #00008B !important;
+    -fx-border-color: #00008B;
+    -fx-border-width: 2;
     -fx-background-radius: 5;
+    -fx-border-radius: 5;
     -fx-cursor: hand;
 }
-
 .boton-salir:hover {
-    -fx-background-color: #F44336;
+    -fx-background-color: #f0f4f8;
 }

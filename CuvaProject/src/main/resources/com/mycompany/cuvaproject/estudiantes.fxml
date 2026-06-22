@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.EstudiantesController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.EstudiantesController">
     <stylesheets>
         <URL value="@estudiantes.css" />
     </stylesheets>
    <children>
-      <Button fx:id="btnEscanear" layoutX="28.0" layoutY="26.0" mnemonicParsing="false" text="Escanear" onAction="#actionScann"  />
+      
+      <VBox spacing="15.0" styleClass="panel-instrucciones" 
+            AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" 
+            AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+         
+         <children>
+            <Label text="Instrucciones de Escaneo Técnico" styleClass="titulo-instrucciones">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="10.0" styleClass="cuerpo-instrucciones">
+               <children>
+                  <Label text="1. Para iniciar el escaneo de un récord académico, presione el botón 'Escanear' ubicado a continuación." 
+                         wrapText="true" styleClass="texto-paso" />
+                  
+                  <Label text="2. Explore el directorio local, seleccione los archivos correspondientes a los expedientes estudiantiles y confirme la acción pulsando 'Aceptar'." 
+                         wrapText="true" styleClass="texto-paso" />
+                  
+                  <Label text="3. El sistema procesará digitalmente el récord académico. En función del rendimiento y las calificaciones detectadas, se generará de forma automática un informe institucional fundamentado estrictamente en los protocolos establecidos 01, 02 y 03." 
+                         wrapText="true" styleClass="texto-paso" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            
+            <Button fx:id="btnEscanear" mnemonicParsing="false" onAction="#actionScann" 
+                    prefHeight="35.0" prefWidth="150.0" styleClass="boton-escanear" text="Escanear">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      
    </children>
 </AnchorPane>
