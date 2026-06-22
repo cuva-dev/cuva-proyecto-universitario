@@ -25,14 +25,6 @@
                   <Insets bottom="30.0" left="40.0" right="60.0" top="30.0" />
                </padding>
                <children>
-                  <Label styleClass="titulo-registro" text="Registro de Usuario">
-                     <font>
-                        <Font name="Arial Bold" size="26.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" top="25.0" />
-                     </VBox.margin>
-                  </Label>
                   
                   <GridPane hgap="10.0" vgap="12.0">
                      <children>
@@ -54,7 +46,7 @@
                                     </FXCollections>
                                  </items>
                               </ComboBox>
-                              <TextField fx:id="id" prefWidth="100.0" styleClass="input-formulario" text="30325147" />
+                              <TextField fx:id="id" prefWidth="100.0" styleClass="input-formulario" />
                            </children>
                         </HBox>
 
@@ -101,7 +93,7 @@
                         <TextField fx:id="post" maxHeight="50.0" maxWidth="120.0" styleClass="input-formulario" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                      </children>
                      <VBox.margin>
-                        <Insets bottom="11.0" top="40.0" />
+                        <Insets bottom="11.0" top="200.0" />
                      </VBox.margin>
                      <columnConstraints>
                         <ColumnConstraints />
@@ -122,11 +114,17 @@
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
                   </Button>
                   <Button fx:id="btnRegresar" mnemonicParsing="false" onAction="#accionRegresar" prefHeight="25.0" prefWidth="120.0" styleClass="boton-salir" text="Regresar">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
                   </Button>
                </children>
             </VBox>
