@@ -11,15 +11,15 @@
 
 /* Título formal */
 .titulo-instrucciones {
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: #F6B80E;
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 2, 0, 0, 1);
 }
 
 /* Estilo del bloque de texto instructivo */
 .texto-paso {
     -fx-font-family: "Arial";
-    -fx-font-size: 14px;
-    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-text-fill: #CFB702;
     -fx-line-spacing: 4px;
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 1, 0, 0, 1);
 }

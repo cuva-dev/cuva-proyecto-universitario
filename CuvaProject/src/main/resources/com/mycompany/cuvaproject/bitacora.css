@@ -1,42 +1,41 @@
-/* Fondo de pantalla coincidente con las otras vistas */
-.mainFxmlClass {
 
+.mainFxmlClass {
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: stretch; 
 }
 
-/* Título de la Bitácora */
+
 .titulo-bitacora {
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: #F6B80E;
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.6), 3, 0, 0, 2);
 }
 
-/* Contenedor principal estilo Vidrio Flotante (Glassmorphism) */
+
 .panel-cristal-bitacora {
-    -fx-background-color: rgba(255, 255, 255, 0.18); 
+    
+    -fx-background-color: rgba(255, 255, 255, 0.32); 
     -fx-background-radius: 14;
-    -fx-border-color: rgba(255, 255, 255, 0.35);
-    -fx-border-width: 1.5;
+    -fx-border-color: rgba(255, 255, 255, 0.55); 
+    -fx-border-width: 1.8;
     -fx-border-radius: 14;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 20, 0.0, 0.0, 6);
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.55), 35, 0.0, 0.0, 16);
 }
 
-/* Configuración estética de la barra de desplazamiento */
 .scroll-registros {
     -fx-background: transparent;
     -fx-background-color: transparent;
     -fx-viewport-background-color: transparent;
-    -fx-hbar-policy: never; /* Oculta barra horizontal innecesaria */
+    -fx-hbar-policy: never; 
     -fx-vbar-policy: as-needed;
 }
 .scroll-registros .corner {
     -fx-background-color: transparent;
 }
 
-/* Estilos de las cabeceras de columnas (Azul profundo de la app) */
 .tabla-cabecera {
-    -fx-background-color: #00008B;
+    -fx-background-color: #00008B; 
     -fx-background-radius: 6;
     -fx-padding: 0 15;
 }
@@ -45,19 +44,19 @@
     -fx-font-family: "Arial";
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: #CFB702;
     -fx-alignment: center-left;
 }
 
-/* Estilos de las celdas de datos de los usuarios */
+
 .label-celda {
     -fx-font-family: "Arial";
     -fx-font-size: 14px;
-    -fx-text-fill: #ffffff; /* Texto blanco de alta legibilidad sobre cristal */
+    -fx-text-fill: #ffffff; 
     -fx-alignment: center-left;
     -fx-padding: 8 15;
-    /* Suave fondo oscuro traslúcido individual por celda para simular filas */
-    -fx-background-color: rgba(0, 0, 0, 0.2);
+ 
+    -fx-background-color: rgba(0, 0, 0, 0.25); 
     -fx-background-radius: 4;
-    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.3), 1, 0, 0, 1);
+
 }
