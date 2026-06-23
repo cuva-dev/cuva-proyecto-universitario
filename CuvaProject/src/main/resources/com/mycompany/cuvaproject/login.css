@@ -1,7 +1,6 @@
 /* FONDO DE LA PANTALLA DE LOGIN */
 .mainFxmlClass {
-    /* Mantiene el fondo heredado de la unefa escalable al 100% */
-    -fx-background-image: url("image/unefa.png");
+    -fx-background-image: url("image/Image_3trdoy3trdoy3trd.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: stretch;
@@ -9,12 +8,16 @@
 
 /* LA TARJETA CENTRAL */
 .login-tarjeta {
-    -fx-background-color: rgba(255, 255, 255, 0.94); /* Fondo blanco semitransparente */
-    -fx-background-radius: 12;
-    -fx-border-color: #00008B;
+
+    -fx-background-color: rgba(255, 255, 255, 0.22); 
+    -fx-background-radius: 16;
+
+    -fx-border-color: rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.35);
     -fx-border-width: 1.5;
-    -fx-border-radius: 12;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 12, 0, 0, 4);
+    -fx-border-radius: 16;
+    
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.35), 25, 0.0, 0.0, 8);
 }
 
 /* TEXTOS */
@@ -44,15 +47,17 @@
 /* INPUTS (CAMPOS DE TEXTO) */
 .input-login {
     -fx-background-color: #FFFFFF;
-    -fx-border-color: #7f8c8d;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-padding: 6;
+    -fx-border-color: #cbd5e1; /* Ajustado a gris suave similar al registro */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 6px 10px;
+    -fx-text-fill: #1e293b;
 }
 
 .input-login:focused {
     -fx-border-color: #00008B;
-    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 139, 0.25), 8, 0, 0, 0);
 }
 
 /* BOTÓN INGRESAR */
@@ -66,4 +71,19 @@
 
 .boton-ingresar:hover {
     -fx-background-color: #0000CD;
+}
+
+/* BOTÓN REGRESAR (Alineado con el diseño general del proyecto) */
+.boton-salir {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #00008B !important;
+    -fx-border-color: #00008B;
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.boton-salir:hover {
+    -fx-background-color: #f0f4f8;
 }

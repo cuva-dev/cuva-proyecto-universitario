@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" styleClass="mainFxmlClass" stylesheets="@main.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" styleClass="mainFxmlClass" stylesheets="@login.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cuvaproject.controller.LoginController">
    <children>
       
       <VBox alignment="CENTER" fillWidth="false" minHeight="700.0" minWidth="1390.0" prefHeight="720.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -39,7 +39,7 @@
                   
                   <GridPane hgap="10.0" vgap="15.0">
                     <columnConstraints>
-                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="110.0" minWidth="80.0" prefWidth="95.0" />
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="130.0" minWidth="90.0" prefWidth="125.0" />
                       <ColumnConstraints hgrow="ALWAYS" maxWidth="220.0" minWidth="150.0" prefWidth="200.0" />
                     </columnConstraints>
                     <rowConstraints>
@@ -62,7 +62,7 @@
                         
                      </children>
                      <VBox.margin>
-                        <Insets bottom="11.0" left="70.0" right="150.0" top="161.0" />
+                        <Insets bottom="11.0" left="40.0" right="150.0" top="161.0" />
                      </VBox.margin>
                   </GridPane>
                   
@@ -74,7 +74,8 @@
                         <Insets bottom="-12.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="BtnRegresar" mnemonicParsing="false" onAction="#accionRegresar" prefHeight="25.0" prefWidth="140.0" text="regresar">
+                  
+                  <Button fx:id="BtnRegresar" mnemonicParsing="false" onAction="#accionRegresar" prefHeight="25.0" prefWidth="140.0" styleClass="boton-salir" text="Regresar">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
