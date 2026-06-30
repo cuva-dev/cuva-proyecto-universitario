@@ -38,9 +38,7 @@ create table if not exists priority
 (
 CodeSubject varchar(100),
 priority varchar(100),
-foreign key (codesubject) references subject(code),
-foreign key (priority) references subject(code)
-
+foreign key (codesubject) references subject(code)
 );
 
 
@@ -60,8 +58,8 @@ create table if not exists reprobated
 (
 IDStudent varchar(50),
 CodeSubject varchar(100),
--- foreign key (IDStudent) references Student(ID),
--- foreign key (CodeSubject) references Subject(code),
+foreign key (IDStudent) references Student(ID),
+foreign key (CodeSubject) references Subject(code),
 grade varchar(50),
 period varchar(50)
 );
