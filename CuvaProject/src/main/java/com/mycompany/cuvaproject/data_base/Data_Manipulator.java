@@ -29,9 +29,9 @@ public class Data_Manipulator {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             
             pstmt.executeUpdate();
-
+            System.out.println("se guardo en la bitacora");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Error al insertar en la bitacora: " + e.getMessage());
         }
     }
 
@@ -48,9 +48,7 @@ public class Data_Manipulator {
                 String action = rs.getString("action");
                 Atime.add(login);
                 Aaction.add(action);
-            };
-    
-            System.out.println("se guardo en la bitacora");
+            };    
               for (Timestamp time : Atime) {
                 System.out.println(time);
               }
@@ -82,10 +80,11 @@ public class Data_Manipulator {
             // el "pstmt" ejecutar la inserción
               int filasAfectadas = pstmt.executeUpdate();
                 if (filasAfectadas > 0) {
+                    System.out.println("se guardo el usuario");
                     InsertTableBitacora(CMySQL,user.getID(),"Insertó un nuevo usuario");
                 }
         } catch (SQLException e) {
-            System.out.println(e);
+            System.err.println("Error al insertar el usuario: " + e.getMessage());
         }
 
     }
@@ -140,7 +139,7 @@ public class Data_Manipulator {
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Error al insertar la materia: " + e.getMessage());
         }
 
     }
@@ -160,7 +159,7 @@ public class Data_Manipulator {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error al eliminar datos: " + e.getMessage());
+            System.err.println("Error al eliminar datos de la materia: " + e.getMessage());
         }
     }
 
@@ -178,7 +177,7 @@ public class Data_Manipulator {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error al modificar los datos: " + e.getMessage());
+            System.err.println("Error al modificar los datos de la materia: " + e.getMessage());
         }
     }
 
@@ -198,7 +197,7 @@ public class Data_Manipulator {
                 InsertTableBitacora(CMySQL,idValue,"Insertó un nuevo estudiante");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Error al insertar el estudiante: " + e.getMessage());
         }
     }
 
@@ -217,7 +216,7 @@ public class Data_Manipulator {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error al eliminar datos: " + e.getMessage());
+            System.err.println("Error al eliminar datos del estudiante: " + e.getMessage());
         }
     }
 
@@ -235,7 +234,7 @@ public class Data_Manipulator {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error al modificar los datos: " + e.getMessage());
+            System.err.println("Error al modificar los datos del estudiante: " + e.getMessage());
         }
     }
     
@@ -254,7 +253,7 @@ public class Data_Manipulator {
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Error al insertar el Reprovado: " + e.getMessage());
         }
     }
     
@@ -275,7 +274,7 @@ public class Data_Manipulator {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error al eliminar datos: " + e.getMessage());
+            System.err.println("Error al eliminar datos del reprovado: " + e.getMessage());
         }
     }
 
