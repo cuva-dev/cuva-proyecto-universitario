@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.IOException; 
 
-
+import javafx.scene.control.ComboBox;
 import javafx.event.ActionEvent; 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader; 
@@ -45,6 +45,9 @@ public class RegisterController implements Initializable {
     private TextField post;
     
     @FXML
+    private ComboBox<String> cmbRol;
+    
+    @FXML
     private void handleUser(ActionEvent event) {
 
         String nameValue = name.getText();
@@ -54,14 +57,27 @@ public class RegisterController implements Initializable {
         String passwordTwoValue = password_two.getText();
         String emailValue = email.getText();
         String postValue = post.getText();
+        String rolValue = cmbRol.getValue();
         
         if (!passwordValue.equals(passwordTwoValue)) {
             throw new IllegalArgumentException("Las contraseñas no coinciden");
         }
-
+            
+        if (rolValue == null) {
+            System.out.println("Por favor, selecciona un rol (Admin o Invitado).");
+            return;
+        }
+        
+        if (rolValue.equals("Admin")) {
+            System.out.println("Registrando usuario con permisos de Administrador.");
+        // Aquí guardas en tu base de datos como Admin
+        } else if (rolValue.equals("Invitado")) {
+            System.out.println("Registrando usuario con permisos de Invitado.");
+        // Aquí guardas en tu base de datos como Invitado
+        }
         // Creación del usuario
         serviceUser service = new serviceUser();
-        service.create(nameValue, lastNameValue, idValue, passwordValue, emailValue, postValue);
+        service.create(nameValue, lastNameValue, idValue, passwordValue, emailValue, postValue, rolValue);
         
         System.out.println("[Registro] Usuario creado con éxito. Redirigiendo...");
 
@@ -109,6 +125,6 @@ public class RegisterController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        cmbRol.getSelectionModel().select("Admin");
     }    
 }

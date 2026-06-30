@@ -58,10 +58,7 @@ public class registroNuevoUsuarioController implements Initializable {
             return;
         }
         
-        serviceUser service = new serviceUser();
-        service.create(nameValue, lastNameValue, usernameValue, passwordValue, emailValue, postValue);
-        
-        System.out.println("se creo correctamente el usuario");
+
         
     }
     @Override

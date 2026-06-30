@@ -18,15 +18,17 @@ public class User {
     private String password;
     private String email;
     private String post;
+    private String range;
 
     // Constructor
-    public User(String name, String lastName, String id, String password, String email, String post) {
+    public User(String name, String lastName, String id, String password, String email, String post, String range) {
         this.name = name;
         this.lastName = lastName;
         this.ID = id;
         this.password = password;
         this.email = email;
         this.post = post;
+        this.range = range;
         
         // Validamos todo al crear el objeto
         validated(); 
@@ -40,6 +42,7 @@ public class User {
     public String getPassword() { return this.password; }
     public String getEmail() { return this.email; }
     public String getPost() { return this.post; }
+     public String getRange() { return this.range; }
 
     // Setters con validación integrada para evitar datos corruptos después
     public void setName(String name) {
@@ -69,6 +72,10 @@ public class User {
 
     public void setPost(String post) {
         this.post = post;
+    }
+    
+    public void setRange(String range) {
+        this.range = range;
     }
 
     // --- VALIDACIONES CORREGIDAS ---
